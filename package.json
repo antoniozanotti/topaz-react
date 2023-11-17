@@ -1,13 +1,30 @@
 {
   "name": "topaz-react",
+  "description": "UI component library based on tailwindcss, heroicons. Topaz is a MIT licensed project that is developed and maintained by Antônio Zanotti.",
+  "author": "Antonio Ricardo Marcon Zanotti <antoniorzanotti@hotmail.com>",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/antoniozanotti/topaz-react#readme",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniozanotti/topaz-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antoniozanotti/topaz-react/issues"
+  },
+  "keywords": [
+    "button",
+    "react"
+  ],
+  "sideEffects": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
+    "dev-storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {

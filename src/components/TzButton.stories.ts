@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { TzButton } from "./TzButton";
-import * as heroIcons from "@heroicons/react/20/solid";
 
 /**
  * The TzButton component has styles for hover, active and focus events, try it.
@@ -8,25 +7,6 @@ import * as heroIcons from "@heroicons/react/20/solid";
 const meta = {
   component: TzButton,
   tags: ["autodocs"],
-  argTypes: {
-    iconName: { control: "select", options: ["", ...Object.keys(heroIcons)] },
-    size: { control: "select", options: ["small", "medium", "large"] },
-    variant: {
-      control: "select",
-      options: ["accent", "primary", "secondary", "negative", "black", "white"],
-    },
-    style: { control: "select", options: ["fill", "outline"] },
-  },
-  args: {
-    label: "Button",
-    iconName: undefined,
-    isIconAfterLabel: false,
-    size: "medium",
-    variant: "accent",
-    style: "fill",
-    isDisabled: false,
-    isLoading: false,
-  },
 } satisfies Meta<typeof TzButton>;
 
 export default meta;
@@ -39,7 +19,7 @@ export const OnlyLabel: Story = {
   },
 };
 
-/*export const OnlyIcon: Story = {
+export const OnlyIcon: Story = {
   name: "Only Icon",
   args: {
     label: "",
@@ -239,4 +219,4 @@ export const Desktop: Story = {
     label: "Home",
     iconName: "HomeIcon",
   },
-};*/
+};

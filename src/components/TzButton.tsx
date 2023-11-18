@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import * as heroIcons from "@heroicons/react/20/solid";
 type IconName = keyof typeof heroIcons;
 
@@ -48,134 +48,171 @@ export const TzButton = ({
   isLoading = false,
   ...props
 }: TzButtonProps) => {
-  
-
-  /*const label = {
-    if (props.isLoading) {
-      return "loading";
+  let variantStyleMode = variant;
+  if (document.documentElement.classList.contains("dark")) {
+    if (variant == "primary") {
+      variantStyleMode = "secondary";
+    } else if (variant == "secondary") {
+      variantStyleMode = "primary";
+    } else if (variant == "black") {
+      variantStyleMode = "white";
+    } else if (variant == "white") {
+      variantStyleMode = "black";
     }
-    return props.label ?? "";
-  };
-
-  const iconName = () => {
-    if (isLoading) {
-      return heroIcons["ArrowPathIcon"];
-    }
-    return iconName ? heroIcons[iconName] : "";
-  });
-
-  const variantStyleMode = computed(() => {
-    if (document.documentElement.classList.contains("dark")) {
-      if (props.variant == "primary") {
-        return "secondary";
-      }
-      if (props.variant == "secondary") {
-        return "primary";
-      }
-      if (props.variant == "black") {
-        return "white";
-      }
-      if (props.variant == "white") {
-        return "black";
-      }
-    }
-    return props.variant;
-  });
+  }
 
   /* button classes */
-  /*const buttonClasses = computed(() => ({
-    // default
-    "rounded-full font-medium flex justify-center items-center": true,
+  let buttonClasses =
+    "rounded-full font-medium flex justify-center items-center";
 
-    // focus
-    "focus:outline focus:outline-offset-2px focus:outline-2px": true,
+  // focus
+  buttonClasses += " focus:outline focus:outline-offset-2 focus:outline-2";
 
-    // size
-    // size -> small
-    "text-sm min-h-42px min-w-42px lg:text-xs lg:min-h-34px lg:min-w-34px":
-      props.size == "small",
-    // size -> base
-    "text-base min-h-60px min-w-60px lg:text-sm lg:min-h-48px lg:min-w-48px":
-      props.size == "medium",
-    // size -> large
-    "text-lg min-h-72px min-w-72px lg:text-base lg:min-h-58px lg:min-w-58px":
-      props.size == "large",
+  // size
+  // size -> small
+  if (size == "small") {
+    buttonClasses +=
+      " text-sm min-h-11 min-w-11 lg:text-xs lg:min-h-9 lg:min-w-9";
+  } else if (size == "medium") {
+    buttonClasses +=
+      " text-base min-h-12 min-w-12 lg:text-sm lg:min-h-10 lg:min-w-10";
+  } else if (size == "large") {
+    buttonClasses +=
+      " text-lg min-h-14 min-w-14 lg:text-base lg:min-h-11 lg:min-w-11";
+  }
 
-    // padding only with text
-    "px-21px lg:px-17px": props.size == "small" && props.label != "",
-    "px-30px lg:px-24px": props.size == "medium" && props.label != "",
-    "px-36px lg:px-29px": props.size == "large" && props.label != "",
+  // padding only with text
+  if (label) {
+    if (size == "small") {
+      buttonClasses += " px-6 lg:px-4";
+    } else if (size == "medium") {
+      buttonClasses += " px-7 lg:px-5";
+    } else if (size == "large") {
+      buttonClasses += " px-8 lg:px-6";
+    }
+  }
 
+  // variants and styles
+  if (style == "fill") {
     // fill
-    // fill -> accent
-    "bg-accent hover:bg-accent-600 active:bg-accent-700 text-light dark:text-dark focus:outline-accent":
-      props.style == "fill" && variantStyleMode.value == "accent",
-    // fill -> primary
-    "bg-primary hover:bg-primary-600 active:bg-primary-700 text-light focus:outline-primary":
-      props.style == "fill" && variantStyleMode.value == "primary",
-    // fill -> secondary
-    "bg-secondary hover:bg-secondary-600 active:bg-secondary-700 text-primary focus:outline-secondary":
-      props.style == "fill" && variantStyleMode.value == "secondary",
-    // fill -> negative
-    "bg-negative hover:bg-negative-600 active:bg-negative-700 text-light dark:text-dark focus:outline-negative":
-      props.style == "fill" && variantStyleMode.value == "negative",
-    // fill -> black
-    "bg-dark hover:bg-dark-700 active:bg-dark-600 text-light focus:outline-dark":
-      props.style == "fill" && variantStyleMode.value == "black",
-    // fill -> white
-    "bg-light hover:bg-light-600 active:bg-light-700 text-dark focus:outline-light":
-      props.style == "fill" && variantStyleMode.value == "white",
-
+    if (variantStyleMode == "accent") {
+      // fill -> accent
+      buttonClasses +=
+        " bg-accent hover:bg-accent-600 active:bg-accent-700 text-light dark:text-dark focus:outline-accent";
+    } else if (variantStyleMode == "primary") {
+      // fill -> primary
+      buttonClasses +=
+        " bg-primary hover:bg-primary-600 active:bg-primary-700 text-light focus:outline-primary";
+    } else if (variantStyleMode == "secondary") {
+      // fill -> secondary
+      buttonClasses +=
+        " bg-secondary hover:bg-secondary-600 active:bg-secondary-700 text-primary focus:outline-secondary";
+    } else if (variantStyleMode == "negative") {
+      // fill -> negative
+      buttonClasses +=
+        " bg-negative hover:bg-negative-600 active:bg-negative-700 text-light dark:text-dark focus:outline-negative";
+    } else if (variantStyleMode == "black") {
+      // fill -> black
+      buttonClasses +=
+        " bg-dark hover:bg-dark-700 active:bg-dark-600 text-light focus:outline-dark";
+    } else if (variantStyleMode == "white") {
+      // fill -> white
+      buttonClasses +=
+        " bg-light hover:bg-light-600 active:bg-light-700 text-dark focus:outline-light";
+    }
+  } else if (style == "outline") {
+    buttonClasses += " outline outline-px";
     // outline
-    "outline outline-1px": props.style == "outline",
-    // outline -> accent
-    "outline-accent hover:outline-accent-600 active:outline-accent-700 active: text-accent":
-      props.style == "outline" && variantStyleMode.value == "accent",
-    // outline -> primary
-    "outline-primary hover:outline-primary-600 active:outline-primary-700 text-primary":
-      props.style == "outline" && variantStyleMode.value == "primary",
-    // outline -> secondary
-    "outline-secondary hover:outline-secondary-600 active:outline-secondary-700 text-primary":
-      props.style == "outline" && variantStyleMode.value == "secondary",
-    // outline -> negative
-    "outline-negative hover:outline-negative-600 active:outline-negative-700 text-negative":
-      props.style == "outline" && variantStyleMode.value == "negative",
-    // outline -> black
-    "outline-dark hover:outline-dark-700 active:outline-dark-600 text-dark":
-      props.style == "outline" && variantStyleMode.value == "black",
-    // outline -> white
-    "outline-light hover:outline-light-600 active:outline-light-700 text-light":
-      props.style == "outline" && variantStyleMode.value == "white",
+    if (variantStyleMode == "accent") {
+      // outline -> accent
+      buttonClasses +=
+        " outline-accent hover:outline-accent-600 active:outline-accent-700 active: text-accent";
+    } else if (variantStyleMode == "primary") {
+      // outline -> primary
+      buttonClasses +=
+        " outline-primary hover:outline-primary-600 active:outline-primary-700 text-primary";
+    } else if (variantStyleMode == "secondary") {
+      // outline -> secondary
+      buttonClasses +=
+        " outline-secondary hover:outline-secondary-600 active:outline-secondary-700 text-primary";
+    } else if (variantStyleMode == "negative") {
+      // outline -> negative
+      buttonClasses +=
+        " outline-negative hover:outline-negative-600 active:outline-negative-700 text-negative";
+    } else if (variantStyleMode == "black") {
+      // outline -> black
+      buttonClasses +=
+        " outline-dark hover:outline-dark-700 active:outline-dark-600 text-dark";
+    } else if (variantStyleMode == "white") {
+      // outline -> white
+      buttonClasses +=
+        " outline-light hover:outline-light-600 active:outline-light-700 text-light";
+    }
+  }
 
-    // is disabled
-    "opacity-50 pointer-events-none": props.isDisabled || props.isLoading,
-  }));*/
+  // is disabled
+  if (isDisabled || isLoading) {
+    buttonClasses += " opacity-50 pointer-events-none";
+  }
 
   /* icon classes */
-  /*const iconClasses = computed(() => ({
-    // size
-    "h-18px w-18px lg:h-14px lg:w-14px": props.size == "small",
-    "h-30px w-30px lg:h-24px lg:w-24px": props.size == "medium",
-    "h-36px w-36px lg:h-29px lg:w-29px": props.size == "large",
-
-    // is loading
-    "animate-spin": props.isLoading,
-  }));*/
+  let iconClasses;
+  // size
+  if (size == "small") {
+    iconClasses = "h-6 w-6 lg:h-4 lg:w-4";
+  } else if (size == "medium") {
+    iconClasses = "h-7 w-7 lg:h-5 lg:w-5";
+  } else if (size == "large") {
+    iconClasses = "h-8 w-8 lg:h-6 lg:w-6";
+  }
+  // is loading
+  if (isLoading) {
+    iconClasses += " animate-spin";
+  }
 
   /* label classes */
-  /*const labelClasses = computed(() => ({
-    // padding between icon and text
-    "pl-7px": iconName.value != "" && !props.isIconAfterLabel,
-    "pr-7px": iconName.value != "" && props.isIconAfterLabel,
-  }));*/
+  let labelClasses;
+  // padding between icon and text
+  if (iconName) {
+    if (!isIconAfterLabel) {
+      labelClasses = "pl-1.5";
+    } else {
+      labelClasses = "pr-1.5";
+    }
+  }
 
-  const buttonClasses = "rounded-full font-medium flex justify-center items-center";
-  const labelClasses = "";
-  //const label = "";
+  // label
+  if (isLoading) {
+    label = "loading";
+  }
+
+  // icon
+  let iconComponentName;
+  if (isLoading) {
+    iconComponentName = heroIcons["ArrowPathIcon"];
+  } else {
+    iconComponentName = iconName ? heroIcons[iconName] : "";
+  }
+  // left icon
+  let leftIcon;
+  if (iconName && !isIconAfterLabel) {
+    leftIcon = React.createElement(iconComponentName, {
+      className: iconClasses,
+    });
+  }
+  // right icon
+  let rightIcon;
+  if (iconName && isIconAfterLabel) {
+    rightIcon = React.createElement(iconComponentName, {
+      className: iconClasses,
+    });
+  }
 
   return (
     <button className={buttonClasses} disabled={isDisabled}>
-      <span className={labelClasses}>{ label }</span>
+      {leftIcon}
+      <span className={labelClasses}>{label}</span>
+      {rightIcon}
     </button>
   );
 };

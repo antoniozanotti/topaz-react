@@ -69,16 +69,18 @@ export const TzButton = ({
   buttonClasses += " focus:outline focus:outline-offset-2 focus:outline-2";
 
   // size
-  // size -> small
   if (size == "small") {
+    // size -> small
     buttonClasses +=
-      " text-sm min-h-11 min-w-11 lg:text-xs lg:min-h-9 lg:min-w-9";
+      " text-sm min-h-[theme(spacing.11)] min-w-[theme(spacing.11)] lg:text-xs lg:min-h-[theme(spacing.9)] lg:min-w-[theme(spacing.9)]";
   } else if (size == "medium") {
+    // size -> medium
     buttonClasses +=
-      " text-base min-h-12 min-w-12 lg:text-sm lg:min-h-10 lg:min-w-10";
+      " text-base min-h-[theme(spacing.12)] min-w-[theme(spacing.12)] lg:text-sm lg:min-h-[theme(spacing.10)] lg:min-w-[theme(spacing.10)]";
   } else if (size == "large") {
+    // size -> large
     buttonClasses +=
-      " text-lg min-h-14 min-w-14 lg:text-base lg:min-h-11 lg:min-w-11";
+      " text-lg min-h-[theme(spacing.14)] min-w-[theme(spacing.14)] lg:text-base lg:min-h-[theme(spacing.11)] lg:min-w-[theme(spacing.11)]";
   }
 
   // padding only with text
@@ -193,26 +195,20 @@ export const TzButton = ({
   } else {
     iconComponentName = iconName ? heroIcons[iconName] : "";
   }
-  // left icon
-  let leftIcon;
-  if (iconName && !isIconAfterLabel) {
-    leftIcon = React.createElement(iconComponentName, {
-      className: iconClasses,
-    });
-  }
-  // right icon
-  let rightIcon;
-  if (iconName && isIconAfterLabel) {
-    rightIcon = React.createElement(iconComponentName, {
-      className: iconClasses,
-    });
-  }
 
   return (
     <button className={buttonClasses} disabled={isDisabled}>
-      {leftIcon}
-      <span className={labelClasses}>{label}</span>
-      {rightIcon}
+      {iconName &&
+        !isIconAfterLabel &&
+        React.createElement(iconComponentName, {
+          className: iconClasses,
+        })}
+      {label && <span className={labelClasses}>{label}</span>}
+      {iconName &&
+        isIconAfterLabel &&
+        React.createElement(iconComponentName, {
+          className: iconClasses,
+        })}
     </button>
   );
 };

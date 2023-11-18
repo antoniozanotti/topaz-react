@@ -7,6 +7,7 @@ const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     theme: topaz,
+    controls: { expanded: true },
     backgrounds: {
       disable: true,
       default: "green",

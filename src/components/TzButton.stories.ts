@@ -7,6 +7,16 @@ import { TzButton } from "./TzButton";
 const meta = {
   component: TzButton,
   tags: ["autodocs"],
+  args: {
+    label: "Button",
+    iconName: undefined,
+    isIconAfterLabel: false,
+    size: "medium",
+    variant: "accent",
+    style: "fill",
+    isDisabled: false,
+    isLoading: false,
+  },
 } satisfies Meta<typeof TzButton>;
 
 export default meta;

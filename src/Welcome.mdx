@@ -1,0 +1,136 @@
+# Welcome to Topaz for React Projects ;)
+
+UI component library based on [tailwindcss](https://tailwindcss.com/), [UnoCSS](https://unocss.dev/), [heroicons](https://heroicons.com/). Topaz is a [MIT licensed](https://opensource.org/license/mit/) project that is developed and maintained by [Antônio Zanotti](https://www.linkedin.com/in/antoniozanotti/).
+
+# Install Topaz React
+
+```sh
+npm install -D topaz-react
+```
+
+Install UnoCSS [(instructions here)](https://unocss.dev/integrations/vite)
+
+Update the main.ts file:
+
+```ts
+import "@unocss/reset/tailwind.css";
+import "virtual:uno.css";
+```
+
+Update the uno.config.ts file:
+
+```ts
+import { defineConfig } from "unocss";
+import presetTopazReact from "topaz-react/src/unocss-preset-topaz-react";
+
+export default defineConfig({
+  presets: [presetTopazReact()],
+  content: {
+    filesystem: ["./node_modules/topaz-react/**/*.tsx"],
+  },
+});
+```
+
+That's all! Topaz's components can be imported in your .tsx files.
+```html
+<script setup lang="ts">
+  import {TzButton} from "topaz-react";
+</script>
+
+<template>
+  <TzButton label="Button" />
+</template>
+```
+# UnoCSS Preset Topaz React
+
+You can **customize colours**, just update the uno.config.ts file.
+
+```ts
+import { defineConfig } from "unocss";
+import presetTopazReact from "topaz-react/src/unocss-preset-topaz-react";
+
+export default defineConfig({
+  presets: [presetTopazReact()],
+  content: {
+    filesystem: ["./node_modules/topaz-react/**/*.tsx"],
+  },
+  theme: {
+    colors: {
+      accent: {
+        DEFAULT: "#22d3ee",
+        600: "#06b6d4",
+        700: "#0891b2",
+      },
+      primary: {
+        DEFAULT: "#155e75",
+        600: "#164e63",
+        700: "#083344",
+      },
+      secondary: {
+        DEFAULT: "#e2e8f0",
+        600: "#cbd5e1",
+        700: "#94a3b8",
+      },
+      negative: {
+        DEFAULT: "#ef4444",
+        600: "#dc2626",
+        700: "#b91c1c",
+      },
+      dark: {
+        DEFAULT: "#000",
+        600: "#1f2937",
+        700: "#111827",
+      },
+      light: {
+        DEFAULT: "#fff",
+        600: "#f3f4f6",
+        700: "#e5e7eb",
+      },
+    },
+  },
+});
+```
+
+### Design Point of View
+
+The components was designed to work with these variants:
+
+- **accent**: color for greatest emphasis.
+- **primary** color for medium emphasis.
+- **secondary**: color for lowest emphasis.
+- **negative**: color for emphasizing actions that can be destructive.
+- **black**: black on light theme, white on dark theme.
+- **white**: white on light theme, black on dark theme.
+
+### Customization Tips
+
+If you want to change colors, I recommend:
+
+- **accent**: use a vibrant colour.
+- **primary**: use a darker colour than accent variant.
+- **secondary**: use a lighter colour than accent variant.
+- **negative**, "black", "white": I don't recommend change them.
+
+# Features
+
+## Components
+
+Browse the stories in the sidebar menu to know the different React components in the Topaz catalog and see usage examples for every component. You can try change props and share the result with others, just copy the URL anytime.
+
+## Dark and Light Theme
+
+![shows the theme button in the toobar!](/images/dark_theme.png "Dark and Light Theme")
+If you want to simulate how the component looks in dark theme, you can switch the theme in the toolbar. It uses [class strategy](https://tailwindcss.com/docs/dark-mode) of [tailwindcss](https://tailwindcss.com/).
+
+***The primary and secondary variations swap with each other. The black and white variations swap with each other.***
+
+## Responsive
+
+![shows the button for change size of the preview in the toobar!](/images/screen_size.png "Screen Size")
+If you want to see how the component looks in different screen sizes, you can switch the screen size in the toolbar. Some components on screens larger than or equal to 1024px will be 20% smaller than its mobile version.
+
+# Inpired In
+
+- [Spectrum](https://spectrum.adobe.com/), Adobe’s design system
+- [Vitamin](https://github.com/Decathlon/vitamin-web), Decathlon's design system
+- [Vuetify](https://github.com/vuetifyjs/vuetify), Vue Component Framework

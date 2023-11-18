@@ -6,7 +6,6 @@
   "license": "MIT",
   "homepage": "https://github.com/antoniozanotti/topaz-react#readme",
   "private": false,
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antoniozanotti/topaz-react.git"
@@ -28,6 +27,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@storybook/addon-themes": "^7.5.3",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
@@ -37,20 +38,26 @@
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
     "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-styling-webpack": "^0.0.5",
     "@storybook/blocks": "^7.5.3",
+    "@storybook/manager-api": "^7.5.3",
     "@storybook/nextjs": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
+    "@storybook/theming": "^7.5.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^10.4.16",
+    "css-loader": "^6.8.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "eslint-plugin-storybook": "^0.6.15",
-    "postcss": "^8",
+    "postcss": "^8.4.31",
+    "postcss-loader": "^7.3.3",
     "storybook": "^7.5.3",
-    "tailwindcss": "^3.3.0",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5"
   }
 }

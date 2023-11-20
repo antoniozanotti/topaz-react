@@ -18,6 +18,11 @@
     "react"
   ],
   "sideEffects": false,
+  "exports": {
+    "./src/tailwind-preset-topaz-react.ts": {
+      "import": "./src/tailwind-preset-topaz-react.ts"
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

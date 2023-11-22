@@ -4,23 +4,23 @@ UI component library based on [tailwindcss](https://tailwindcss.com/), [heroicon
 
 # Install Topaz React
 
-```sh
-npm install -D topaz-react
+```bash
+npm install --save topaz-react
 ```
 
 Install tailwindcss [(instructions here)](https://tailwindcss.com/docs/installation)
 
-
-
 That's all! Topaz's components can be imported in your .tsx files.
-```html
-<script setup lang="ts">
-  import {TzButton} from "topaz-react";
-</script>
+```tsx
+import React, { Component } from 'react'
 
-<template>
-  <TzButton label="Button" />
-</template>
+import {TzButton} from 'topaz-react'
+
+class Example extends Component {
+  render() {
+    return <TzButton label="Button" />
+  }
+}
 ```
 # tailwindcss Preset Topaz React
 

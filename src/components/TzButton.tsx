@@ -2,7 +2,7 @@ import React from "react";
 import * as heroIcons from "@heroicons/react/20/solid";
 type IconName = keyof typeof heroIcons;
 
-interface TzButtonProps {
+export interface TzButtonProps {
   /**
    * The label of the button.
    */
@@ -45,8 +45,7 @@ export const TzButton = ({
   variant = "accent",
   style = "fill",
   isDisabled = false,
-  isLoading = false,
-  ...props
+  isLoading = false
 }: TzButtonProps) => {
   let variantStyleMode = variant;
   if (document.documentElement.classList.contains("dark")) {

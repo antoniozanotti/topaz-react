@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzButton } from "./TzButton";
+import { TzButton } from "../../src/components/TzButton";
 
 /**
  * The TzButton component has styles for hover, active and focus events, try it.
  */
-const meta = {
+const meta: Meta<typeof TzButton> = {
   component: TzButton,
   tags: ["autodocs"],
   args: {
@@ -17,7 +17,7 @@ const meta = {
     isDisabled: false,
     isLoading: false,
   },
-} satisfies Meta<typeof TzButton>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -188,7 +188,7 @@ export const SmallMobile: Story = {
   name: "Small Mobile",
   parameters: {
     viewport: {
-      defaultViewport: 'mobile1',
+      defaultViewport: "mobile1",
     },
   },
   args: {
@@ -201,7 +201,7 @@ export const LargeMobile: Story = {
   name: "Large Mobile",
   parameters: {
     viewport: {
-      defaultViewport: 'mobile2',
+      defaultViewport: "mobile2",
     },
   },
   args: {
@@ -214,7 +214,7 @@ export const Tablet: Story = {
   name: "Tablet",
   parameters: {
     viewport: {
-      defaultViewport: 'tablet',
+      defaultViewport: "tablet",
     },
   },
   args: {

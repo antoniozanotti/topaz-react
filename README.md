@@ -5,7 +5,7 @@ UI component library based on [tailwindcss](https://tailwindcss.com/), [heroicon
 # Install Topaz React
 
 ```sh
-npm install --save topaz-react
+npm i -D topaz-react
 ```
 
 Install Tailwind CSS [(instructions here)](https://tailwindcss.com/docs/installation)

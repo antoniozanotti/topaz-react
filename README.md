@@ -4,7 +4,7 @@ UI component library based on [tailwindcss](https://tailwindcss.com/), [heroicon
 
 # Install Topaz React
 
-```bash
+```sh
 npm install --save topaz-react
 ```
 
@@ -87,7 +87,7 @@ export default config;
 The components was designed to work with these variants:
 
 - **accent**: color for greatest emphasis.
-- **primary** color for medium emphasis.
+- **primary**: color for medium emphasis.
 - **secondary**: color for lowest emphasis.
 - **negative**: color for emphasizing actions that can be destructive.
 - **black**: black on light theme, white on dark theme.
@@ -104,24 +104,18 @@ If you want to change colors, I recommend:
 
 # Features
 
-## Components
+- **Components**: visit the [official documentation](https://topaz-react.netlify.app/) to see available components.
+- **Dark and Light Theme**: it uses [class strategy](https://tailwindcss.com/docs/dark-mode) of [tailwindcss](https://tailwindcss.com/).
+- **Responsive**: some components on screens larger than or equal to 1024px will be ~20% smaller than mobile version.
 
-Browse the stories in the sidebar menu to know the different React components in the Topaz catalog and see usage examples for every component. You can try change props and share the result with others, just copy the URL anytime.
-
-## Dark and Light Theme
-
-![shows the theme button in the toobar!](/images/dark_theme.png "Dark and Light Theme")
-If you want to simulate how the component looks in dark theme, you can switch the theme in the toolbar. It uses [class strategy](https://tailwindcss.com/docs/dark-mode) of [tailwindcss](https://tailwindcss.com/).
-
-***The primary and secondary variations swap with each other. The black and white variations swap with each other.***
-
-## Responsive
-
-![shows the button for change size of the preview in the toobar!](/images/screen_size.png "Screen Size")
-If you want to see how the component looks in different screen sizes, you can switch the screen size in the toolbar. Some components on screens larger than or equal to 1024px will be ~20% smaller than its mobile version.
+**_The primary and secondary variations swap with each other. The black and white variations swap with each other._**
 
 # Inpired In
 
 - [Spectrum](https://spectrum.adobe.com/), Adobe’s design system
 - [Vitamin](https://github.com/Decathlon/vitamin-web), Decathlon's design system
 - [Vuetify](https://github.com/vuetifyjs/vuetify), Vue Component Framework
+
+# License
+
+MIT © [antoniozanotti](https://github.com/antoniozanotti)

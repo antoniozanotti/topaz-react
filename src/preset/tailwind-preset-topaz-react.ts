@@ -1,7 +1,7 @@
 const presetTopazReact = () => {
   return {
     content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-    darkMode: ['class', '[data-mode="dark"]'],
+    darkMode: ['class'],
     theme: {
       colors: {
         accent: {

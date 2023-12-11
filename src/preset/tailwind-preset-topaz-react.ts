@@ -4,36 +4,66 @@ const presetTopazReact = () => {
     darkMode: ['class'],
     theme: {
       colors: {
-        accent: {
-          DEFAULT: '#22d3ee',
-          600: '#06b6d4',
-          700: '#0891b2',
+        'accent': {
+          DEFAULT: '#0891B2',
+          1: '#06B6D4',
+          2: '#22D3EE'
         },
-        primary: {
-          DEFAULT: '#155e75',
-          600: '#164e63',
-          700: '#083344',
+        'dark-accent': {
+          DEFAULT: '#22D3EE',
+          1: '#06B6D4',
+          2: '#0891B2'
         },
-        secondary: {
-          DEFAULT: '#e2e8f0',
-          600: '#cbd5e1',
-          700: '#94a3b8',
+        'primary': {
+          DEFAULT: '#94A3B8',
+          1: '#E2E8F0',
+          2: '#CBD5E1'
         },
-        negative: {
-          DEFAULT: '#ef4444',
-          600: '#dc2626',
-          700: '#b91c1c',
+        'dark-primary': {
+          DEFAULT: '#155E75',
+          1: '#164E63',
+          2: '#083344'
         },
-        dark: {
-          DEFAULT: '#000',
-          600: '#1f2937',
-          700: '#111827',
+        'secondary': {
+          DEFAULT: '#083344',
+          1: '#155E75',
+          2: '#164E63'
         },
-        light: {
-          DEFAULT: '#fff',
-          600: '#f3f4f6',
-          700: '#e5e7eb',
+        'dark-secondary': {
+          DEFAULT: '#E2E8F0',
+          1: '#CBD5E1',
+          2: '#94A3B8'
         },
+        'negative': {
+          DEFAULT: '#B91C1C',
+          1: '#EF4444',
+          2: '#DC2626'
+        },
+        'dark-negative': {
+          DEFAULT: '#EF4444',
+          1: '#DC2626',
+          2: '#B91C1C'
+        },
+        'dark': {
+          DEFAULT: '#E5E7EB',
+          1: '#FFFFFF',
+          2: '#F3F4F6'
+        },
+        'dark-dark': {
+          DEFAULT: '#1F2937',
+          1: '#111827',
+          2: '#000000'
+        },
+        'light': {
+          DEFAULT: '#111827',
+          1: '#1F2937',
+          2: '#000000'
+        },
+        'dark-light': {
+          DEFAULT: '#FFFFFF',
+          1: '#F3F4F6',
+          2: '#E5E7EB'
+        }
       },
     },
   };

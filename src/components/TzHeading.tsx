@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode } from 'react';
 
 export interface TzHeadingProps {
@@ -12,16 +13,34 @@ export interface TzHeadingProps {
   /**
    * The variant of the heading.
    */
-  variant?: 'accent' | 'accent-1' | 'accent-2'  | 'primary' | 'primary-1' | 'primary-2' | 'secondary' | 'secondary-1' | 'secondary-2';
+  variant?:
+    | 'accent'
+    | 'accent-1'
+    | 'accent-2'
+    | 'primary'
+    | 'primary-1'
+    | 'primary-2'
+    | 'secondary'
+    | 'secondary-1'
+    | 'secondary-2';
   /**
    * Children of the heading.
    */
   children?: ReactNode;
+  /**
+   * Additional classes of the heading.
+   */
+  className?: string;
 }
 
-export const TzHeading = ({ level = 'h1', size='large', variant='accent', children }: TzHeadingProps) => {
-  let CustomHeadingTag = `${level}`;
-  let headingClasses = '';
+export const TzHeading = ({
+  level = 'h1',
+  size = 'large',
+  variant = 'accent',
+  children,
+  className
+}: TzHeadingProps) => {
+  let headingClasses = className;
 
   switch (size) {
     case 'large':
@@ -66,6 +85,6 @@ export const TzHeading = ({ level = 'h1', size='large', variant='accent', childr
   }
 
   return (
-    <CustomHeadingTag className={headingClasses}>{children}</CustomHeadingTag>
+    React.createElement(level, {className: headingClasses}, children)
   );
 };

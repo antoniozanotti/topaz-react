@@ -8,6 +8,10 @@ export const TzToggle = ({
   
 }: TzToggleProps) => {
   return (
-    <span>TzToggle</span>
+    <label>
+      <span />
+      <input type="checkbox" />
+      <span />
+    </label>
   );
 };

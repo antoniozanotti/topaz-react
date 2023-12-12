@@ -23,14 +23,14 @@ const preview: Preview = {
         light: "light",
         dark: "dark",
       },
-      defaultTheme: "light",
+      defaultTheme: "dark",
     }),
     withThemeByDataAttribute({
       themes: {
         light: 'light',
         dark: 'dark',
       },
-      defaultTheme: 'light',
+      defaultTheme: 'dark',
       attributeName: 'data-mode',
     }),
   ],

@@ -15,29 +15,29 @@ const presetTopazReact = () => {
           2: '#0891B2'
         },
         'primary': {
-          DEFAULT: '#94A3B8',
-          1: '#E2E8F0',
-          2: '#CBD5E1'
+          DEFAULT: '#083344',
+          1: '#164E63',
+          2: '#155E75'
         },
         'dark-primary': {
-          DEFAULT: '#155E75',
-          1: '#164E63',
-          2: '#083344'
-        },
-        'secondary': {
-          DEFAULT: '#083344',
-          1: '#155E75',
-          2: '#164E63'
-        },
-        'dark-secondary': {
           DEFAULT: '#E2E8F0',
           1: '#CBD5E1',
           2: '#94A3B8'
         },
+        'secondary': {
+          DEFAULT: '#94A3B8',
+          1: '#CBD5E1',
+          2: '#E2E8F0'
+        },
+        'dark-secondary': {
+          DEFAULT: '#155E75',
+          1: '#164E63',
+          2: '#083344'
+        },
         'negative': {
           DEFAULT: '#B91C1C',
-          1: '#EF4444',
-          2: '#DC2626'
+          1: '#DC2626',
+          2: '#EF4444'
         },
         'dark-negative': {
           DEFAULT: '#EF4444',
@@ -46,18 +46,18 @@ const presetTopazReact = () => {
         },
         'dark': {
           DEFAULT: '#E5E7EB',
-          1: '#FFFFFF',
-          2: '#F3F4F6'
+          1: '#F3F4F6',
+          2: '#FFFFFF'
         },
         'dark-dark': {
-          DEFAULT: '#1F2937',
+          DEFAULT: '#000000',
           1: '#111827',
-          2: '#000000'
+          2: '#1F2937'
         },
         'light': {
-          DEFAULT: '#111827',
-          1: '#1F2937',
-          2: '#000000'
+          DEFAULT: '#000000',
+          1: '#111827',
+          2: '#1F2937'
         },
         'dark-light': {
           DEFAULT: '#FFFFFF',

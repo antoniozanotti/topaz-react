@@ -41,10 +41,10 @@ export const h3: Story = {
 };
 
 export const h4: Story = {
-  name: "h4, small, secondary-2",
+  name: "h4, small, primary",
   args: {
     level: "h4",
     size: "small",
-    variant: "secondary-2"
+    variant: "primary"
   },
 };

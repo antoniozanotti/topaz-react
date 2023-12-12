@@ -111,8 +111,8 @@ export const VariantNegative: Story = {
   },
 };
 
-export const VariantBlack: Story = {
-  name: "Variant: Black",
+export const VariantDark: Story = {
+  name: "Variant: Dark",
   parameters: {
     backgrounds: {
       disable: false,
@@ -121,12 +121,12 @@ export const VariantBlack: Story = {
   args: {
     label: "Share",
     iconName: "ShareIcon",
-    variant: "black",
+    variant: "dark",
   },
 };
 
-export const VariantWhite: Story = {
-  name: "Variant: White",
+export const VariantLight: Story = {
+  name: "Variant: Light",
   parameters: {
     backgrounds: {
       disable: false,
@@ -135,7 +135,7 @@ export const VariantWhite: Story = {
   args: {
     label: "Share",
     iconName: "ShareIcon",
-    variant: "white",
+    variant: "light",
   },
 };
 

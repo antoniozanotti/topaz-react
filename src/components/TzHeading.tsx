@@ -24,33 +24,33 @@ export interface TzHeadingProps {
     | 'secondary-1'
     | 'secondary-2';
   /**
-   * Children of the heading.
-   */
-  children?: ReactNode;
-  /**
    * Additional classes of the heading.
    */
   className?: string;
+  /**
+   * Children of the heading.
+   */
+  children?: ReactNode;
 }
 
 export const TzHeading = ({
   level = 'h1',
   size = 'large',
   variant = 'accent',
+  className = '',
   children,
-  className
 }: TzHeadingProps) => {
   let headingClasses = className;
 
   switch (size) {
     case 'large':
-      headingClasses += ' text-8xl';
+      headingClasses += ' text-5xl lg:text-8xl';
       break;
     case 'medium':
-      headingClasses += ' text-5xl';
+      headingClasses += ' text-3xl lg:text-5xl';
       break;
     default:
-      headingClasses += ' text-4xl';
+      headingClasses += ' text-1xl lg:text-3xl';
       break;
   }
 
@@ -84,7 +84,5 @@ export const TzHeading = ({
       break;
   }
 
-  return (
-    React.createElement(level, {className: headingClasses}, children)
-  );
+  return React.createElement(level, { className: headingClasses }, children);
 };

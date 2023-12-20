@@ -2,17 +2,8 @@ import React from 'react';
 import { ReactNode } from 'react';
 
 export interface TzHeadingProps {
-  /**
-   * The level of the heading.
-   */
   level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  /**
-   * The size of the heading.
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * The variant of the heading.
-   */
+  size?: 'small' | 'medium' | 'large' | 'x_large';
   variant?:
     | 'accent'
     | 'accent-1'
@@ -22,20 +13,23 @@ export interface TzHeadingProps {
     | 'primary-2'
     | 'secondary'
     | 'secondary-1'
-    | 'secondary-2';
-  /**
-   * Additional classes of the heading.
-   */
+    | 'secondary-2'
+    | 'negative'
+    | 'negative-1'
+    | 'negative-2'
+    | 'dark'
+    | 'dark-1'
+    | 'dark-2'
+    | 'light'
+    | 'light-1'
+    | 'light-2';
   className?: string;
-  /**
-   * Children of the heading.
-   */
   children?: ReactNode;
 }
 
 export const TzHeading = ({
   level = 'h1',
-  size = 'large',
+  size = 'small',
   variant = 'accent',
   className = '',
   children,
@@ -43,14 +37,17 @@ export const TzHeading = ({
   let headingClasses = className;
 
   switch (size) {
-    case 'large':
-      headingClasses += ' text-5xl lg:text-8xl';
+    case 'small':
+      headingClasses += ' text-c5 md:text-c6 lg:text-c8 xl:text-c9';
       break;
     case 'medium':
-      headingClasses += ' text-3xl lg:text-5xl';
+      headingClasses += ' text-c6 sm:text-c7 lg:text-c10';
+      break;
+    case 'large':
+      headingClasses += ' text-c8 sm:text-c9 md:text-c10 lg:text-c11';
       break;
     default:
-      headingClasses += ' text-1xl lg:text-3xl';
+      headingClasses += ' text-c10 md:text-c11 lg:text-c12';
       break;
   }
 
@@ -81,6 +78,33 @@ export const TzHeading = ({
       break;
     case 'secondary-2':
       headingClasses += ' text-secondary-2 dark:text-dark-secondary-2';
+      break;
+    case 'negative':
+      headingClasses += ' text-negative dark:text-dark-negative';
+      break;
+    case 'negative-1':
+      headingClasses += ' text-negative-1 dark:text-dark-negative-1';
+      break;
+    case 'negative-2':
+      headingClasses += ' text-negative-2 dark:text-dark-negative-2';
+      break;
+    case 'dark':
+      headingClasses += ' text-dark dark:text-dark-dark';
+      break;
+    case 'dark-1':
+      headingClasses += ' text-dark-1 dark:text-dark-dark-1';
+      break;
+    case 'dark-2':
+      headingClasses += ' text-dark-2 dark:text-dark-dark-2';
+      break;
+    case 'light':
+      headingClasses += ' text-light dark:text-dark-light';
+      break;
+    case 'light-1':
+      headingClasses += ' text-light-1 dark:text-dark-light-1';
+      break;
+    case 'light-2':
+      headingClasses += ' text-light-2 dark:text-dark-light-2';
       break;
   }
 

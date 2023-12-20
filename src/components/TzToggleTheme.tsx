@@ -33,13 +33,11 @@ export const TzToggleTheme = ({}: TzToggleThemeProps) => {
       <TzIcon
         iconName="MoonIcon"
         variant="primary"
-        size="small"
         className="place-self-center"
       />
       <TzIcon
         iconName="SunIcon"
         variant="primary"
-        size="small"
         className="place-self-center"
       />
     </button>

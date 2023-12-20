@@ -1,43 +1,14 @@
 import React from 'react';
 import * as heroIcons from '@heroicons/react/20/solid';
-type IconName = keyof typeof heroIcons;
 
 export interface TzButtonProps {
-  /**
-   * The label of the button.
-   */
   label?: string;
-  /**
-   * The icon of the button.
-   */
-  iconName?: IconName;
-  /**
-   * Is the icon after the label?
-   */
+  iconName?: keyof typeof heroIcons;
   isIconAfterLabel?: boolean;
-  /**
-   * The size of the button.
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * The variant of the button.
-   */
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
-  /**
-   * The style of the button.
-   */
   style?: 'fill' | 'outline';
-  /**
-   * Is the button disabled?
-   */
   isDisabled?: boolean;
-  /**
-   * Is the button loading?
-   */
   isLoading?: boolean;
-  /**
-   * Additional classes of the button.
-   */
   className?: string;
 }
 
@@ -45,7 +16,6 @@ export const TzButton = ({
   label,
   iconName,
   isIconAfterLabel = false,
-  size = 'medium',
   variant = 'accent',
   style = 'fill',
   isDisabled = false,
@@ -60,7 +30,10 @@ export const TzButton = ({
   buttonClasses += ' focus:outline focus:outline-offset-2 focus:outline-2';
 
   // size
-  if (size == 'small') {
+  buttonClasses += ' '
+
+
+  /*if (size == 'small') {
     // size -> small
     buttonClasses +=
       ' text-sm min-h-[theme(spacing.11)] min-w-[theme(spacing.11)] lg:text-xs lg:min-h-[theme(spacing.9)] lg:min-w-[theme(spacing.9)]';
@@ -72,10 +45,10 @@ export const TzButton = ({
     // size -> large
     buttonClasses +=
       ' text-lg min-h-[theme(spacing.14)] min-w-[theme(spacing.14)] lg:text-base lg:min-h-[theme(spacing.11)] lg:min-w-[theme(spacing.11)]';
-  }
+  }*/
 
   // padding only with text
-  if (label) {
+  /*if (label) {
     if (size == 'small') {
       buttonClasses += ' px-6 lg:px-4';
     } else if (size == 'medium') {
@@ -83,7 +56,7 @@ export const TzButton = ({
     } else if (size == 'large') {
       buttonClasses += ' px-8 lg:px-6';
     }
-  }
+  }*/
 
   // variants and styles
   if (style == 'fill') {
@@ -150,15 +123,15 @@ export const TzButton = ({
   }
 
   /* icon classes */
-  let iconClasses;
+  let iconClasses = '';
   // size
-  if (size == 'small') {
+  /*if (size == 'small') {
     iconClasses = 'h-6 w-6 lg:h-4 lg:w-4';
   } else if (size == 'medium') {
     iconClasses = 'h-7 w-7 lg:h-5 lg:w-5';
   } else if (size == 'large') {
     iconClasses = 'h-8 w-8 lg:h-6 lg:w-6';
-  }
+  }*/
   // is loading
   if (isLoading) {
     iconClasses += ' animate-spin';

@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzHeading } from "../../src/components/TzHeading";
+import { TzPicture } from "../../src/components/TzPicture";
 
 /**
- * The TzHeading component.
+ * The TzPicture component.
  */
-const meta: Meta<typeof TzHeading> = {
-  component: TzHeading,
+const meta: Meta<typeof TzPicture> = {
+  component: TzPicture,
   tags: ["autodocs"],
   args: {
     level: "h1",
-    size: "x_large",
+    size: "large",
     variant: "accent",
-    children: "Heading"
+    children: "Picture"
   },
 };
 
@@ -19,7 +19,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const h1: Story = {
-  name: "h1, x_large, accent"
+  name: "h1, large, accent"
 };
 
 export const h2: Story = {
@@ -41,10 +41,10 @@ export const h3: Story = {
 };
 
 export const h4: Story = {
-  name: "h4, small, secondary",
+  name: "h4, small, primary",
   args: {
     level: "h4",
     size: "small",
-    variant: "secondary"
+    variant: "primary"
   },
 };

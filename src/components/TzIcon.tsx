@@ -1,29 +1,14 @@
 import React from 'react';
 import * as heroIcons from '@heroicons/react/24/outline';
-type IconName = keyof typeof heroIcons;
 
 export interface TzIconProps {
-  /**
-   * The icon of the button.
-   */
-  iconName?: IconName;
-  /**
-   * The size of the button.
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * The variant of the button.
-   */
+  iconName?: keyof typeof heroIcons;
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
-  /**
-   * Additional classes of the heading.
-   */
   className?: string;
 }
 
 export const TzIcon = ({
   iconName,
-  size = 'medium',
   variant = 'accent',
   className = ''
 }: TzIconProps) => {
@@ -31,13 +16,13 @@ export const TzIcon = ({
   /* icon classes */
   let iconClasses = className;
   // size
-  if (size == 'small') {
+  /*if (size == 'small') {
     iconClasses += ' h-6 w-6 lg:h-4 lg:w-4';
   } else if (size == 'medium') {
     iconClasses += ' h-7 w-7 lg:h-5 lg:w-5';
   } else if (size == 'large') {
     iconClasses += ' h-8 w-8 lg:h-6 lg:w-6';
-  }
+  }*/
 
   // variants
   if (variant == 'accent') {

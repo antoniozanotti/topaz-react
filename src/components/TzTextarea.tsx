@@ -1,15 +1,15 @@
 import React from 'react';
 
-export interface TzInputProps {
-  type?: 'text' | 'email'
+export interface TzTextareaProps {
+  rows?: number
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
   className?: string;
 }
 
-export const TzInput = ({
+export const TzTextarea = ({
   
-}: TzInputProps) => {
+}: TzTextareaProps) => {
   return (
-    <span>TzInput</span>
+    <span>TzTextarea</span>
   );
 };

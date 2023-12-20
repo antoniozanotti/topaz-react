@@ -11,7 +11,6 @@ const meta: Meta<typeof TzButton> = {
     label: "Button",
     iconName: undefined,
     isIconAfterLabel: false,
-    size: "medium",
     variant: "accent",
     style: "fill",
     isDisabled: false,
@@ -50,30 +49,6 @@ export const LabelIconOnRight: Story = {
   args: {
     ...LabelIconOnLeft.args,
     isIconAfterLabel: true,
-  },
-};
-
-export const SizeSmall: Story = {
-  name: "Size: Small",
-  args: {
-    ...LabelIconOnLeft.args,
-    size: "small",
-  },
-};
-
-export const SizeMedium: Story = {
-  name: "Size: Medium",
-  args: {
-    ...LabelIconOnLeft.args,
-    size: "medium",
-  },
-};
-
-export const SizeLarge: Story = {
-  name: "Size: Large",
-  args: {
-    ...LabelIconOnLeft.args,
-    size: "large",
   },
 };
 

@@ -3,6 +3,20 @@ const presetTopazReact = () => {
     content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
     darkMode: ['class'],
     theme: {
+      fontSize: {
+        'c1': '10px',
+        'c2': '12px',
+        'c3': '14px',
+        'c4': '16px',
+        'c5': '20px',
+        'c6': '24px',
+        'c7': '32px',
+        'c8': '36px',
+        'c9': '40px',
+        'c10': '48px',
+        'c11': '64px',
+        'c12': '96px'
+      },
       colors: {
         'accent': {
           DEFAULT: '#0891B2',

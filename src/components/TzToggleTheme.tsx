@@ -16,20 +16,24 @@ export const TzToggleTheme = ({}: TzToggleThemeProps) => {
     }
   };
 
-  let spanClasses =
-    'transform duration-300 bg-secondary-2 dark:bg-dark-secondary-2 block rounded-full absolute w-11 h-6 mt-1';
-  if (theme == 'dark') {
-    spanClasses += ' left-12 lg:left-8';
-  } else {
-    spanClasses += ' left-1';
-  }
+  let buttonBackground = 'bg-secondary dark:bg-dark-secondary';
+  let buttonSize = 'w-[74px] h-[28px] sm:w-[104px] sm:h-[38px] lg:w-[132px] lg:h-[48px]';
+  let buttonOther = 'rounded-full cursor-pointer relative flex justify-around';
+
+  let spanAnimation = 'transform duration-300'
+  let spanBackground = 'bg-secondary-2 dark:bg-dark-secondary-2';
+  let spanOther = 'block rounded-full absolute';
+  let spanSize = 'w-[38px] h-[22px] sm:w-[60px] sm:h-[32px] lg:w-[77px] lg:h-[42px]';
+  let spanPosition = 'self-center left-[32px] dark:left-[3px] sm:left-[40px] lg:left-[52px]';
+
+  
 
   return (
     <button
-      className="bg-secondary-1 dark:bg-dark-secondary-1 rounded-full grid grid-cols-2 gap-4 w-24 h-8 lg:w-20 lg:h-8 cursor-pointer px-2 relative"
+      className={`${buttonBackground} ${buttonSize} ${buttonOther}`}
       onClick={handleClick}
     >
-      <span className={spanClasses} />
+      <span className={`${spanAnimation} ${spanBackground} ${spanOther} ${spanSize} ${spanPosition}`} />
       <TzIcon
         iconName="MoonIcon"
         variant="primary"

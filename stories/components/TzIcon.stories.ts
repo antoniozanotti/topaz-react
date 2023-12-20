@@ -8,43 +8,39 @@ const meta: Meta<typeof TzIcon> = {
   component: TzIcon,
   tags: ["autodocs"],
   args: {
-    level: "h1",
-    size: "large",
-    variant: "accent",
-    children: "Icon"
+    iconName: "ArrowRightIcon",
+    variant: "light",
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const h1: Story = {
-  name: "h1, large, accent"
+export const arrowRightIcon: Story = {
+  name: "ArrowRightIcon, light"
 };
 
-export const h2: Story = {
-  name: "h2, large, accent-1",
+export const moon: Story = {
+  name: "MoonIcon, primary",
   args: {
-    level: "h2",
-    size: "large",
-    variant: "accent-1"
-  },
-};
-
-export const h3: Story = {
-  name: "h3, medium, accent-2",
-  args: {
-    level: "h3",
-    size: "medium",
-    variant: "accent-2"
-  },
-};
-
-export const h4: Story = {
-  name: "h4, small, primary",
-  args: {
-    level: "h4",
-    size: "small",
+    iconName: "MoonIcon",
     variant: "primary"
   },
 };
+
+export const sun: Story = {
+  name: "SunIcon, secondary",
+  args: {
+    iconName: "SunIcon",
+    variant: "secondary"
+  },
+};
+
+export const heart: Story = {
+  name: "HeartIcon, negative",
+  args: {
+    iconName: "HeartIcon",
+    variant: "negative"
+  },
+};
+

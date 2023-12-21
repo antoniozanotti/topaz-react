@@ -25,9 +25,7 @@ export const TzToggleTheme = ({}: TzToggleThemeProps) => {
   let spanOther = 'block rounded-full absolute';
   let spanSize = 'w-[38px] h-[22px] sm:w-[60px] sm:h-[32px] lg:w-[77px] lg:h-[42px]';
   let spanPosition = 'self-center left-[32px] dark:left-[3px] sm:left-[40px] lg:left-[52px]';
-
   
-
   return (
     <button
       className={`${buttonBackground} ${buttonSize} ${buttonOther}`}

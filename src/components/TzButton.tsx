@@ -1,6 +1,7 @@
 import React from 'react';
 import * as heroIcons from '@heroicons/react/20/solid';
 import { TzIcon } from './TzIcon';
+import type { TzIconVariant } from './TzIcon';
 
 export interface TzButtonProps {
   label?: string;
@@ -37,24 +38,9 @@ export const TzButton = ({
     buttonSizeClasses += ' px-[16px] sm:px-[27px] lg:px-[36px]'
   }
 
-  /*if (size == 'small') {
-    // size -> small
-    buttonClasses +=
-      ' text-sm min-h-[theme(spacing.11)] min-w-[theme(spacing.11)] lg:text-xs lg:min-h-[theme(spacing.9)] lg:min-w-[theme(spacing.9)]';
-  } else if (size == 'medium') {
-    // size -> medium
-    buttonClasses +=
-      ' text-base min-h-[theme(spacing.12)] min-w-[theme(spacing.12)] lg:text-sm lg:min-h-[theme(spacing.10)] lg:min-w-[theme(spacing.10)]';
-  } else if (size == 'large') {
-    // size -> large
-    buttonClasses +=
-      ' text-lg min-h-[theme(spacing.14)] min-w-[theme(spacing.14)] lg:text-base lg:min-h-[theme(spacing.11)] lg:min-w-[theme(spacing.11)]';
-  }*/
-
   // variants and styles
   let buttonVariantClasses = '';
   if (style == 'fill') {
-    buttonVariantClasses = 'text-dark-2 dark:text-dark-dark-2';
     // fill
     if (variant == 'accent') {
       // fill -> accent
@@ -127,17 +113,6 @@ export const TzButton = ({
     iconClasses += ' animate-spin';
   }
 
-  /* label classes */
-  let labelClasses;
-  // padding between icon and text
-  if (iconName) {
-    if (!isIconAfterLabel) {
-      labelClasses = '';
-    } else {
-      labelClasses = '';
-    }
-  }
-
   // label
   if (isLoading) {
     label = 'loading';
@@ -148,6 +123,37 @@ export const TzButton = ({
     iconName = 'ArrowPathIcon';
   }
 
+  // variant
+  let iconVariant: TzIconVariant = variant;
+  if(style=="fill"){
+    switch (variant) {
+      case "accent":
+        buttonVariantClasses += ' text-inverse-accent dark:text-inverse-dark-accent';
+        iconVariant = "inverse-accent";
+        break;
+      case "primary":
+        buttonVariantClasses += ' text-inverse-primary dark:text-inverse-dark-primary';
+        iconVariant = "inverse-primary";
+        break;
+      case "secondary":
+        buttonVariantClasses += ' text-inverse-secondary dark:text-inverse-dark-secondary';
+        iconVariant = "inverse-secondary";
+        break;
+      case "negative":
+        buttonVariantClasses += ' text-inverse-negative dark:text-inverse-dark-negative';
+        iconVariant = "inverse-negative";
+        break;
+      case "dark":
+        buttonVariantClasses += ' text-inverse-dark dark:text-inverse-dark-dark';
+        iconVariant = "inverse-dark";
+        break;
+      case "light":
+        buttonVariantClasses += ' text-inverse-light dark:text-inverse-dark-light';
+        iconVariant = "inverse-light";
+        break;
+    }
+  }
+
   return (
     <button
       className={`${buttonOtherClasses} ${buttonFocusClasses} ${buttonSizeClasses} ${buttonVariantClasses} ${buttonDisabledClasses} ${className}`}
@@ -156,10 +162,10 @@ export const TzButton = ({
       {iconName &&
         React.createElement(TzIcon, {
           iconName: iconName,
-          variant: 'light',
+          variant: iconVariant,
           className: iconClasses,
         })}
-      {label && <span className={labelClasses}>{label}</span>}
+      {label && <span>{label}</span>}
     </button>
   );
 };

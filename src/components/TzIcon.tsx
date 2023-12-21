@@ -32,11 +32,8 @@ export const TzIcon = ({
     variantClasses = 'text-light dark:text-dark-light';
   }
 
-  // icon
-  let iconComponentName = iconName ? heroIcons[iconName] : '';
-
   return (
-    React.createElement(iconComponentName, {
+    React.createElement(heroIcons[iconName], {
       className: `${sizeClasses} ${variantClasses} ${className}`,
     })
   );

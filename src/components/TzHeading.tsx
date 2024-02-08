@@ -43,11 +43,8 @@ export const TzHeading = ({
     case 'medium':
       headingClasses += ' text-c6 sm:text-c7 lg:text-c10';
       break;
-    case 'large':
-      headingClasses += ' text-c8 sm:text-c9 md:text-c10 lg:text-c11';
-      break;
     default:
-      headingClasses += ' text-c10 md:text-c11 lg:text-c12';
+      headingClasses += ' text-c8 sm:text-c9 md:text-c10 lg:text-c11';
       break;
   }
 

@@ -5,6 +5,7 @@ export interface TzInputProps {
   type?: 'text' | 'email';
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
   style?: 'fill' | 'outline';
+  required?: boolean;
   className?: string;
 }
 
@@ -12,13 +13,14 @@ export const TzInput = ({
   type = 'text',
   variant = 'accent',
   style = 'fill',
+  required = true,
   className = '',
 }: TzInputProps) => {
   /* input classes */
   let inputOtherClasses = 'rounded';
 
   // focus
-  let buttonFocusClasses = useFocusClasses();
+  let focusClasses = useFocusClasses();
 
   // size
   let sizeClasses =
@@ -31,6 +33,7 @@ export const TzInput = ({
     <input
       type={type}
       className={`${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses} ${className}`}
+      required={required}
     />
   );
 };

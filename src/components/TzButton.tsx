@@ -30,7 +30,7 @@ export const TzButton = ({
     'rounded-full font-medium flex gap-x-2 justify-center place-items-center';
 
   // focus
-  let buttonFocusClasses = useFocusClasses();
+  let focusClasses = useFocusClasses();
 
   // size
   let buttonSizeClasses = 'h-[28px] sm:h-[38px] lg:h-[48px] min-w-[28px] sm:min-w-[38px] lg:min-w-[48px]';
@@ -94,7 +94,7 @@ export const TzButton = ({
 
   return (
     <button
-      className={`${buttonOtherClasses} ${buttonFocusClasses} ${buttonSizeClasses} ${variantClasses} ${buttonDisabledClasses} ${className}`}
+      className={`${buttonOtherClasses} ${focusClasses} ${buttonSizeClasses} ${variantClasses} ${buttonDisabledClasses} ${className}`}
       disabled={isDisabled}
     >
       {iconName &&

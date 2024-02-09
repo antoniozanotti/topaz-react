@@ -5,6 +5,7 @@ export interface TzTextareaProps {
   rows?: number;
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
   style?: 'fill' | 'outline';
+  required?: boolean;
   className?: string;
 }
 
@@ -12,6 +13,7 @@ export const TzTextarea = ({
   rows = 7,
   variant = 'accent',
   style = 'fill',
+  required = true,
   className = '',
 }: TzTextareaProps) => {
   /* input classes */
@@ -19,7 +21,7 @@ export const TzTextarea = ({
     'rounded';
 
   // focus
-  let buttonFocusClasses = useFocusClasses();
+  let focusClasses = useFocusClasses();
 
   // size
   let sizeClasses =
@@ -32,6 +34,7 @@ export const TzTextarea = ({
     <textarea
       rows={rows}
       className={`${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses} ${className}`}
+      required={required}
     ></textarea>
   );
 };

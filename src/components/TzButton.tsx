@@ -13,6 +13,7 @@ export interface TzButtonProps {
   isDisabled?: boolean;
   isLoading?: boolean;
   className?: string;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 export const TzButton = ({
@@ -24,6 +25,7 @@ export const TzButton = ({
   isDisabled = false,
   isLoading = false,
   className = '',
+  onClick = undefined
 }: TzButtonProps) => {
   /* button classes */
   let buttonOtherClasses =
@@ -96,6 +98,7 @@ export const TzButton = ({
     <button
       className={`${buttonOtherClasses} ${focusClasses} ${buttonSizeClasses} ${variantClasses} ${buttonDisabledClasses} ${className}`}
       disabled={isDisabled}
+      onClick={onClick}
     >
       {iconName &&
         React.createElement(TzIcon, {

@@ -11,17 +11,19 @@ export interface TzTextareaProps {
 }
 
 export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
-  ({
-    rows = 7,
-    variant = 'accent',
-    style = 'fill',
-    required = true,
-    className = '',
-    name = ''
-  }: TzTextareaProps, ref) => {
+  function TzTextarea(
+    {
+      rows = 7,
+      variant = 'accent',
+      style = 'fill',
+      required = true,
+      className = '',
+      name = '',
+    }: TzTextareaProps,
+    ref
+  ) {
     /* input classes */
-    let inputOtherClasses =
-      'rounded';
+    let inputOtherClasses = 'rounded';
 
     // focus
     let focusClasses = useFocusClasses();
@@ -29,7 +31,7 @@ export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
     // size
     let sizeClasses =
       'h-[177px] px-[10px] sm:px-[14px] lg:px-[20px] py-[7px] sm:py-[10px] lg:py-[12px]';
-    
+
     // variants and styles
     let variantClasses = useVariantClasses(variant, style);
 

@@ -27,13 +27,13 @@ export interface TzHeadingProps {
   children?: ReactNode;
 }
 
-export const TzHeading = ({
+export function TzHeading({
   level = 'h1',
   size = 'small',
   variant = 'accent',
   className = '',
   children,
-}: TzHeadingProps) => {
+}: TzHeadingProps) {
   let headingClasses = className;
 
   switch (size) {
@@ -106,4 +106,4 @@ export const TzHeading = ({
   }
 
   return React.createElement(level, { className: headingClasses }, children);
-};
+}

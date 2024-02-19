@@ -6,9 +6,9 @@ export interface TzPictureProps {
   className?: string;
 }
 
-export const TzPicture = ({
+export function TzPicture ({
   
-}: TzPictureProps) => {
+}: TzPictureProps) {
   return (
     <span>TzPicture</span>
   );

@@ -4,7 +4,7 @@ import { TzIcon } from './TzIcon';
 
 export interface TzToggleThemeProps {}
 
-export const TzToggleTheme = ({}: TzToggleThemeProps) => {
+export function TzToggleTheme ({}: TzToggleThemeProps) {
   const [theme, setTheme] = useState('dark');
   const handleClick = () => {
     if (theme == 'dark') {

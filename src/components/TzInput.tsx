@@ -11,14 +11,17 @@ export interface TzInputProps {
 }
 
 export const TzInput = forwardRef<HTMLInputElement, TzInputProps>(
-  ({
-    type = 'text',
-    variant = 'accent',
-    style = 'fill',
-    required = true,
-    className = '',
-    name = ''
-  }: TzInputProps, ref) => {
+  function TzInput(
+    {
+      type = 'text',
+      variant = 'accent',
+      style = 'fill',
+      required = true,
+      className = '',
+      name = '',
+    }: TzInputProps,
+    ref
+  ) {
     /* input classes */
     let inputOtherClasses = 'rounded';
 

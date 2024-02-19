@@ -16,7 +16,7 @@ export interface TzButtonProps {
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-export const TzButton = ({
+export function TzButton ({
   label,
   iconName,
   isIconAfterLabel = false,
@@ -26,7 +26,7 @@ export const TzButton = ({
   isLoading = false,
   className = '',
   onClick = undefined
-}: TzButtonProps) => {
+}: TzButtonProps) {
   /* button classes */
   let buttonOtherClasses =
     'rounded-full font-medium flex gap-x-2 justify-center place-items-center';

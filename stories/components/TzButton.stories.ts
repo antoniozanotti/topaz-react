@@ -12,7 +12,7 @@ const meta: Meta<typeof TzButton> = {
     iconName: undefined,
     isIconAfterLabel: false,
     variant: "accent",
-    style: "fill",
+    filled: true,
     isDisabled: false,
     isLoading: false,
   },
@@ -115,7 +115,7 @@ export const VariantLight: Story = {
 };
 
 export const StyleFill: Story = {
-  name: "Style: Fill",
+  name: "Filled: true",
   parameters: {
     backgrounds: {
       disable: false,
@@ -129,7 +129,7 @@ export const StyleFill: Story = {
 };
 
 export const StyleOutline: Story = {
-  name: "Style: Outline",
+  name: "Filled: false",
   parameters: {
     backgrounds: {
       disable: false,
@@ -137,7 +137,7 @@ export const StyleOutline: Story = {
   },
   args: {
     ...StyleFill.args,
-    style: "outline",
+    filled: false,
   },
 };
 

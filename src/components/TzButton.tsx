@@ -9,7 +9,7 @@ export interface TzButtonProps {
   iconName?: keyof typeof heroIcons;
   isIconAfterLabel?: boolean;
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
-  style?: 'fill' | 'outline';
+  filled?: boolean;
   isDisabled?: boolean;
   isLoading?: boolean;
   className?: string;
@@ -21,7 +21,7 @@ export function TzButton ({
   iconName,
   isIconAfterLabel = false,
   variant = 'accent',
-  style = 'fill',
+  filled = true,
   isDisabled = false,
   isLoading = false,
   className = '',
@@ -40,8 +40,8 @@ export function TzButton ({
     buttonSizeClasses += ' px-[16px] sm:px-[27px] lg:px-[36px]'
   }
 
-  // variants and styles
-  let variantClasses = useVariantClasses(variant, style);
+  // variants and filled
+  let variantClasses = useVariantClasses(variant, filled);
 
   // is disabled
   let buttonDisabledClasses =
@@ -71,7 +71,7 @@ export function TzButton ({
 
   // icon variant
   let iconVariant: TzIconVariant = variant;
-  if(style=="fill"){
+  if(filled){
     switch (variant) {
       case "accent":
         iconVariant = "inverse-accent";

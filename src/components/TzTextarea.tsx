@@ -4,7 +4,7 @@ import { useVariantClasses, useFocusClasses } from './useStyles';
 export interface TzTextareaProps {
   rows?: number;
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
-  style?: 'fill' | 'outline';
+  filled?: boolean;
   required?: boolean;
   className?: string;
   name?: string;
@@ -15,7 +15,7 @@ export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
     {
       rows = 7,
       variant = 'accent',
-      style = 'fill',
+      filled = true,
       required = true,
       className = '',
       name = '',
@@ -32,8 +32,8 @@ export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
     let sizeClasses =
       'h-[177px] px-[10px] sm:px-[14px] lg:px-[20px] py-[7px] sm:py-[10px] lg:py-[12px]';
 
-    // variants and styles
-    let variantClasses = useVariantClasses(variant, style);
+    // variants and filled
+    let variantClasses = useVariantClasses(variant, filled);
 
     return (
       <textarea

@@ -13,8 +13,8 @@ const meta: Meta<typeof TzButton> = {
     isIconAfterLabel: false,
     variant: "accent",
     filled: true,
-    isDisabled: false,
     isLoading: false,
+    disabled: false
   },
 };
 
@@ -114,7 +114,7 @@ export const VariantLight: Story = {
   },
 };
 
-export const StyleFill: Story = {
+export const FilledTrue: Story = {
   name: "Filled: true",
   parameters: {
     backgrounds: {
@@ -128,7 +128,7 @@ export const StyleFill: Story = {
   },
 };
 
-export const StyleOutline: Story = {
+export const FilledFalse: Story = {
   name: "Filled: false",
   parameters: {
     backgrounds: {
@@ -136,7 +136,7 @@ export const StyleOutline: Story = {
     },
   },
   args: {
-    ...StyleFill.args,
+    ...FilledTrue.args,
     filled: false,
   },
 };
@@ -146,7 +146,7 @@ export const Disable: Story = {
   args: {
     iconName: "LockClosedIcon",
     label: "Locked",
-    isDisabled: true,
+    disabled: true,
   },
 };
 

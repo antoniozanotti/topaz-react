@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactNode } from 'react';
 
-export interface TzHeadingProps {
+export interface TzHeadingProps extends React.ComponentProps<'h1'> {
   level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   size?: 'small' | 'medium' | 'large' | 'x_large';
   variant?:
@@ -23,7 +23,6 @@ export interface TzHeadingProps {
     | 'light'
     | 'light-1'
     | 'light-2';
-  className?: string;
   children?: ReactNode;
 }
 
@@ -31,10 +30,10 @@ export function TzHeading({
   level = 'h1',
   size = 'small',
   variant = 'accent',
-  className = '',
   children,
+  ...props
 }: TzHeadingProps) {
-  let headingClasses = className;
+  let headingClasses = '';
 
   switch (size) {
     case 'small':
@@ -105,5 +104,9 @@ export function TzHeading({
       break;
   }
 
-  return React.createElement(level, { className: headingClasses }, children);
+  props.className = props.className
+    ? headingClasses + ' ' + props.className
+    : headingClasses;
+
+  return React.createElement(level, { ...props }, children);
 }

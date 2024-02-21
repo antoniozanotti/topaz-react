@@ -1,25 +1,14 @@
 import React, { forwardRef } from 'react';
 import { useVariantClasses, useFocusClasses } from './useStyles';
 
-export interface TzInputProps {
-  type?: 'text' | 'email';
+export interface TzInputProps extends React.ComponentProps<'input'> {
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
   filled?: boolean;
-  required?: boolean;
-  className?: string;
-  name?: string;
 }
 
 export const TzInput = forwardRef<HTMLInputElement, TzInputProps>(
   function TzInput(
-    {
-      type = 'text',
-      variant = 'accent',
-      filled = true,
-      required = true,
-      className = '',
-      name = '',
-    }: TzInputProps,
+    { variant = 'accent', filled = true, ...props }: TzInputProps,
     ref
   ) {
     /* input classes */
@@ -35,14 +24,11 @@ export const TzInput = forwardRef<HTMLInputElement, TzInputProps>(
     // variants and filled
     let variantClasses = useVariantClasses(variant, filled);
 
-    return (
-      <input
-        type={type}
-        className={`${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses} ${className}`}
-        required={required}
-        name={name}
-        ref={ref}
-      />
-    );
+    let inputClasses = `${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses}`;
+    props.className = props.className
+      ? inputClasses + ' ' + props.className
+      : inputClasses;
+
+    return <input {...props} ref={ref} />;
   }
 );

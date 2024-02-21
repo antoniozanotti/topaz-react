@@ -4,16 +4,14 @@ import { TzIcon } from './TzIcon';
 import type { TzIconVariant } from './TzIcon';
 import { useVariantClasses, useFocusClasses } from './useStyles';
 
-export interface TzButtonProps {
+export interface TzButtonProps extends React.ComponentProps<"button"> {
   label?: string;
   iconName?: keyof typeof heroIcons;
   isIconAfterLabel?: boolean;
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
   filled?: boolean;
-  isDisabled?: boolean;
   isLoading?: boolean;
-  className?: string;
-  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
+  disabled?: boolean;
 }
 
 export function TzButton ({
@@ -22,10 +20,9 @@ export function TzButton ({
   isIconAfterLabel = false,
   variant = 'accent',
   filled = true,
-  isDisabled = false,
   isLoading = false,
-  className = '',
-  onClick = undefined
+  disabled = false,
+  ...props
 }: TzButtonProps) {
   /* button classes */
   let buttonOtherClasses =
@@ -45,7 +42,7 @@ export function TzButton ({
 
   // is disabled
   let buttonDisabledClasses =
-    isDisabled || isLoading ? 'opacity-50 pointer-events-none' : '';
+    disabled || isLoading ? 'opacity-50 pointer-events-none' : '';
 
   /* icon classes */
   let iconClasses = '';
@@ -94,12 +91,13 @@ export function TzButton ({
     }
   }
 
+  let buttonClasses = `${buttonOtherClasses} ${focusClasses} ${buttonSizeClasses} ${variantClasses} ${buttonDisabledClasses}`;
+  props.className = props.className
+    ? buttonClasses + " " + props.className
+    : buttonClasses;
+
   return (
-    <button
-      className={`${buttonOtherClasses} ${focusClasses} ${buttonSizeClasses} ${variantClasses} ${buttonDisabledClasses} ${className}`}
-      disabled={isDisabled}
-      onClick={onClick}
-    >
+    <button {...props} disabled={disabled}>
       {iconName &&
         React.createElement(TzIcon, {
           iconName: iconName,

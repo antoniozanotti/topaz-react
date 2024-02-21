@@ -1,13 +1,10 @@
 import React, { forwardRef } from 'react';
 import { useVariantClasses, useFocusClasses } from './useStyles';
 
-export interface TzTextareaProps {
+export interface TzTextareaProps extends React.ComponentProps<'textarea'> {
   rows?: number;
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
   filled?: boolean;
-  required?: boolean;
-  className?: string;
-  name?: string;
 }
 
 export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
@@ -16,12 +13,11 @@ export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
       rows = 7,
       variant = 'accent',
       filled = true,
-      required = true,
-      className = '',
-      name = '',
+      ...props
     }: TzTextareaProps,
     ref
   ) {
+
     /* input classes */
     let inputOtherClasses = 'rounded';
 
@@ -35,14 +31,11 @@ export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
     // variants and filled
     let variantClasses = useVariantClasses(variant, filled);
 
-    return (
-      <textarea
-        rows={rows}
-        className={`${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses} ${className}`}
-        required={required}
-        name={name}
-        ref={ref}
-      ></textarea>
-    );
+    let textareaClasses = `${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses}`;
+    props.className = props.className
+      ? textareaClasses + ' ' + props.className
+      : textareaClasses;
+
+    return <textarea rows={rows} {...props} ref={ref}></textarea>;
   }
 );

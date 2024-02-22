@@ -48,3 +48,34 @@ export const h4: Story = {
     variant: "secondary"
   },
 };
+
+export const SmallMobile: Story = {
+  name: "Small Mobile",
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile1",
+    },
+  }
+};
+
+export const LargeMobile: Story = {
+  name: "Large Mobile",
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile2",
+    },
+  }
+};
+
+export const Tablet: Story = {
+  name: "Tablet",
+  parameters: {
+    viewport: {
+      defaultViewport: "tablet",
+    },
+  }
+};
+
+export const Desktop: Story = {
+  name: "Desktop"
+};

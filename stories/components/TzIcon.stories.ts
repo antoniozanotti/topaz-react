@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TzIcon } from "../../src/components/TzIcon";
 
 /**
- * The TzIcon component.
+ * The TzIcon component based on [heroicons](https://heroicons.com/).
  */
 const meta: Meta<typeof TzIcon> = {
   component: TzIcon,
@@ -42,5 +42,36 @@ export const heart: Story = {
     iconName: "HeartIcon",
     variant: "negative"
   },
+};
+
+export const SmallMobile: Story = {
+  name: "Small Mobile",
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile1",
+    },
+  }
+};
+
+export const LargeMobile: Story = {
+  name: "Large Mobile",
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile2",
+    },
+  }
+};
+
+export const Tablet: Story = {
+  name: "Tablet",
+  parameters: {
+    viewport: {
+      defaultViewport: "tablet",
+    },
+  }
+};
+
+export const Desktop: Story = {
+  name: "Desktop"
 };
 

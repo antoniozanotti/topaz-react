@@ -35,7 +35,7 @@ export default function Home() {
 
 # Tailwind CSS Preset Topaz React
 
-You can **customize colours**, just update the tailwind.config.ts file.
+You can customize **colours** and **font sizes**, just update the tailwind.config.ts file.
 
 ```ts
 import type { Config } from "tailwindcss";
@@ -45,67 +45,93 @@ const config: Config = {
   content: ["./node_modules/topaz-react/src/components/*.{js,ts,jsx,tsx,mdx}"],
   presets: [presetTopazReact],
   theme: {
+    fontSize: {
+      c1: '10px',
+      c2: '12px',
+      c3: '14px',
+      c4: '16px',
+      c5: '20px',
+      c6: '24px',
+      c7: '32px',
+      c8: '36px',
+      c9: '40px',
+      c10: '48px',
+      c11: '64px',
+      c12: '96px',
+    },
     colors: {
-      'accent': {
-          DEFAULT: '#0891B2',
-          1: '#06B6D4',
-          2: '#22D3EE'
-        },
-        'dark-accent': {
-          DEFAULT: '#22D3EE',
-          1: '#06B6D4',
-          2: '#0891B2'
-        },
-        'primary': {
-          DEFAULT: '#083344',
-          1: '#164E63',
-          2: '#155E75'
-        },
-        'dark-primary': {
-          DEFAULT: '#E2E8F0',
-          1: '#CBD5E1',
-          2: '#94A3B8'
-        },
-        'secondary': {
-          DEFAULT: '#94A3B8',
-          1: '#CBD5E1',
-          2: '#E2E8F0'
-        },
-        'dark-secondary': {
-          DEFAULT: '#155E75',
-          1: '#164E63',
-          2: '#083344'
-        },
-        'negative': {
-          DEFAULT: '#B91C1C',
-          1: '#DC2626',
-          2: '#EF4444'
-        },
-        'dark-negative': {
-          DEFAULT: '#EF4444',
-          1: '#DC2626',
-          2: '#B91C1C'
-        },
-        'dark': {
-          DEFAULT: '#E5E7EB',
-          1: '#F3F4F6',
-          2: '#FFFFFF'
-        },
-        'dark-dark': {
-          DEFAULT: '#000000',
-          1: '#111827',
-          2: '#1F2937'
-        },
-        'light': {
-          DEFAULT: '#000000',
-          1: '#111827',
-          2: '#1F2937'
-        },
-        'dark-light': {
-          DEFAULT: '#FFFFFF',
-          1: '#F3F4F6',
-          2: '#E5E7EB'
-        }
+      accent: {
+        DEFAULT: '#0891B2',
+        1: '#06B6D4',
+        2: '#22D3EE',
+      },
+      'dark-accent': {
+        DEFAULT: '#22D3EE',
+        1: '#06B6D4',
+        2: '#0891B2',
+      },
+      primary: {
+        DEFAULT: '#083344',
+        1: '#164E63',
+        2: '#155E75',
+      },
+      'dark-primary': {
+        DEFAULT: '#E2E8F0',
+        1: '#CBD5E1',
+        2: '#94A3B8',
+      },
+      secondary: {
+        DEFAULT: '#94A3B8',
+        1: '#CBD5E1',
+        2: '#E2E8F0',
+      },
+      'dark-secondary': {
+        DEFAULT: '#155E75',
+        1: '#164E63',
+        2: '#083344',
+      },
+      negative: {
+        DEFAULT: '#B91C1C',
+        1: '#DC2626',
+        2: '#EF4444',
+      },
+      'dark-negative': {
+        DEFAULT: '#EF4444',
+        1: '#DC2626',
+        2: '#B91C1C',
+      },
+      dark: {
+        DEFAULT: '#E5E7EB',
+        1: '#F3F4F6',
+        2: '#FFFFFF',
+      },
+      'dark-dark': {
+        DEFAULT: '#000000',
+        1: '#111827',
+        2: '#1F2937',
+      },
+      light: {
+        DEFAULT: '#000000',
+        1: '#111827',
+        2: '#1F2937',
+      },
+      'dark-light': {
+        DEFAULT: '#FFFFFF',
+        1: '#F3F4F6',
+        2: '#E5E7EB',
+      },
+      'inverse-accent': '#000000',
+      'inverse-dark-accent': '#000000',
+      'inverse-primary': '#FFFFFF',
+      'inverse-dark-primary': '#000000',
+      'inverse-secondary': '#000000',
+      'inverse-dark-secondary': '#FFFFFF',
+      'inverse-negative': '#FFFFFF',
+      'inverse-dark-negative': '#000000',
+      'inverse-dark': '#000000',
+      'inverse-dark-dark': '#FFFFFF',
+      'inverse-light': '#FFFFFF',
+      'inverse-dark-light': '#000000',
     },
   },
 };
@@ -116,16 +142,35 @@ export default config;
 
 The components was designed to work with these variants:
 
-- **accent**: color for greatest emphasis.
-- **primary**: color for medium emphasis.
-- **secondary**: color for lowest emphasis.
-- **negative**: color for emphasizing actions that can be destructive.
-- **dark**: dark on light theme, light on dark theme.
-- **light**: light on light theme, dark on dark theme.
+Light Theme:
+- **accent**: colors for greatest emphasis.
+- **primary**: colors for medium emphasis.
+- **secondary**: colors for lowest emphasis.
+- **negative**: colors for emphasizing actions that can be destructive.
+- **dark**: light colors.
+- **light**: dark colors.
+- **inverse-accent**: text color above a accent background.
+- **inverse-primary**: text color above a primary background.
+- **inverse-secondary**: text color above a secondary background.
+- **inverse-negative**: text color above a negative background.
+- **inverse-dark**: text color above a dark background.
+- **inverse-light**: text color above a light background.
 
-This color palette is ordered by contrast between variants (accent, primary, secondary...) and also shades (default, 1, 2).
+Dark Theme:
+- **dark-accent**: accent colors on dark theme.
+- **dark-primary**: primary colors on dark theme.
+- **dark-secondary**: secondary colors on dark theme.
+- **dark-negative**: negative colors on dark theme.
+- **dark-dark**: light colors.
+- **dark-light**: dark colors.
+- **inverse-dark-accent**: text color above a accent background on dark theme.
+- **inverse-dark-primary**: text color above a primary background on dark theme.
+- **inverse-dark-secondary**: text color above a secondary background on dark theme.
+- **inverse-dark-negative**: text color above a negative background on dark theme.
+- **inverse-dark-dark**: text color above a dark background on dark theme.
+- **inverse-dark-light**: text color above a light background on dark theme.
 
-**_You can use a [color contrast checker](https://colorkit.co/contrast-checker/) to help calculate the contrast. The colours dark-2 and dark-dark-2 are used for background.__**
+**_You can use a [color contrast checker](https://colorkit.co/contrast-checker/) to help calculate the contrast. The colours dark-2 and dark-dark-2 are used for background._**
 
 # Features
 
@@ -140,7 +185,3 @@ This color palette is ordered by contrast between variants (accent, primary, sec
 - [Spectrum](https://spectrum.adobe.com/), Adobe’s design system
 - [Vitamin](https://github.com/Decathlon/vitamin-web), Decathlon's design system
 - [Vuetify](https://github.com/vuetifyjs/vuetify), Vue Component Framework
-
-# License
-
-MIT © [antoniozanotti](https://github.com/antoniozanotti)

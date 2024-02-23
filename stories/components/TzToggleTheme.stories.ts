@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TzToggleTheme } from "../../src/components/TzToggleTheme";
 
 /**
- * The TzToggleTheme component based on [class strategy](https://tailwindcss.com/docs/dark-mode) of [tailwindcss](https://tailwindcss.com/).
+ * The TzToggleTheme component.
  */
 const meta: Meta<typeof TzToggleTheme> = {
   component: TzToggleTheme,

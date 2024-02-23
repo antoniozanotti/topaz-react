@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import { TzIcon } from './TzIcon';
 
 export interface TzToggleThemeProps {
+  initialTheme?: "dark" | "";
   className?: string;
 }
 
-export function TzToggleTheme({ className = '' }: TzToggleThemeProps) {
-  const [theme, setTheme] = useState('dark');
+export function TzToggleTheme({ initialTheme = "dark", className = '' }: TzToggleThemeProps) {
+  const [theme, setTheme] = useState(initialTheme);
   const handleClick = () => {
     if (theme == 'dark') {
       document.documentElement.classList.remove('dark');

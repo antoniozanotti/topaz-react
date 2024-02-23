@@ -12,8 +12,25 @@ const meta: Meta<typeof TzToggleTheme> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const toggle: Story = {
-  name: "default"
+export const InitialThemeDark: Story = {
+  name: "Initial Theme: Dark",
+  parameters: {
+    themes: {
+      themeOverride: 'dark'
+    },
+  },
+};
+
+export const InitialThemeLight: Story = {
+  name: "Initial Theme: Light",
+  args: {
+    initialTheme: ""
+  },
+  parameters: {
+    themes: {
+      themeOverride: 'light'
+    },
+  },
 };
 
 export const SmallMobile: Story = {

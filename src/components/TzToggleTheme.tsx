@@ -20,14 +20,14 @@ export function TzToggleTheme({ initialTheme = "dark", className = '' }: TzToggl
   };
 
   let buttonBackground = 'bg-secondary dark:bg-dark-secondary';
-  let buttonSize = 'w-[74px] h-[28px] sm:w-[104px] sm:h-[38px] lg:w-[132px] lg:h-[48px]';
+  let buttonSize = 'w-[104px] h-[38px] lg:w-[132px] lg:h-[48px]';
   let buttonOther = 'rounded-full cursor-pointer relative flex justify-around';
 
   let spanAnimation = 'transform duration-300';
   let spanBackground = 'bg-secondary-2 dark:bg-dark-secondary-2';
   let spanOther = 'block rounded-full absolute';
-  let spanSize = 'w-[38px] h-[22px] sm:w-[60px] sm:h-[32px] lg:w-[77px] lg:h-[42px]';
-  let spanPosition = 'self-center left-[32px] dark:left-[3px] sm:left-[40px] lg:left-[52px]';
+  let spanSize = 'w-[60px] h-[32px] lg:w-[77px] lg:h-[42px]';
+  let spanPosition = 'self-center left-[40px] dark:left-[3px] lg:left-[52px]';
 
   return (
     <button

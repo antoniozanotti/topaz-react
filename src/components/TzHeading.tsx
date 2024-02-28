@@ -37,13 +37,13 @@ export function TzHeading({
 
   switch (size) {
     case 'small':
-      headingClasses += ' text-c5 md:text-c6 lg:text-c8 xl:text-c9';
+      headingClasses = 'text-c6 md:text-c7 lg:text-c8 xl:text-c9';
       break;
     case 'medium':
-      headingClasses += ' text-c6 sm:text-c7 lg:text-c10';
+      headingClasses = 'text-c7 sm:text-c8 lg:text-c10';
       break;
     default:
-      headingClasses += ' text-c8 sm:text-c9 md:text-c10 lg:text-c11';
+      headingClasses = 'text-c9 sm:text-c10 lg:text-c11';
       break;
   }
 

@@ -32,9 +32,9 @@ export function TzButton ({
   let focusClasses = useFocusClasses();
 
   // size
-  let buttonSizeClasses = 'h-[28px] sm:h-[38px] lg:h-[48px] min-w-[28px] sm:min-w-[38px] lg:min-w-[48px]';
+  let buttonSizeClasses = 'h-[38px] lg:h-[48px] min-w-[38px] lg:min-w-[48px]';
   if(label){
-    buttonSizeClasses += ' px-[16px] sm:px-[27px] lg:px-[36px]'
+    buttonSizeClasses += ' px-[27px] lg:px-[36px]'
   }
 
   // variants and filled

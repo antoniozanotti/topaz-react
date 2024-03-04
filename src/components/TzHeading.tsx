@@ -37,7 +37,7 @@ export function TzHeading({
 
   switch (size) {
     case 'small':
-      headingClasses = 'text-c6 md:text-c7 lg:text-c8 xl:text-c9';
+      headingClasses = 'text-c5 md:text-c6 lg:text-c7 xl:text-c8';
       break;
     case 'medium':
       headingClasses = 'text-c7 sm:text-c8 lg:text-c10';

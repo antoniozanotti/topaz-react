@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzTextarea } from "../../src/components/TzTextarea";
+import { TzTextarea } from "./TzTextarea";
 
 /**
  * The TzTextarea component has styles for hover and focus events, try it.

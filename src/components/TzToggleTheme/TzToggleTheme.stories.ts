@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzToggleTheme } from "../../src/components/TzToggleTheme";
+import { TzToggleTheme } from "./TzToggleTheme";
 
 /**
  * The TzToggleTheme component.

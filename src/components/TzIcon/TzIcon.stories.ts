@@ -1,51 +1,46 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzHeading } from "../../src/components/TzHeading";
+import { TzIcon } from "./TzIcon";
 
 /**
- * The TzHeading component.
+ * The TzIcon component based on [heroicons](https://heroicons.com/).
  */
-const meta: Meta<typeof TzHeading> = {
-  component: TzHeading,
+const meta: Meta<typeof TzIcon> = {
+  component: TzIcon,
   tags: ["autodocs"],
   args: {
-    level: "h1",
-    size: "x_large",
-    variant: "accent",
-    children: "Heading"
+    iconName: "ArrowRightIcon",
+    variant: "light",
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const h1: Story = {
-  name: "h1, x_large, accent"
+export const arrowRightIcon: Story = {
+  name: "ArrowRightIcon, light"
 };
 
-export const h2: Story = {
-  name: "h2, large, accent-1",
+export const moon: Story = {
+  name: "MoonIcon, primary",
   args: {
-    level: "h2",
-    size: "large",
-    variant: "accent-1"
+    iconName: "MoonIcon",
+    variant: "primary"
   },
 };
 
-export const h3: Story = {
-  name: "h3, medium, accent-2",
+export const sun: Story = {
+  name: "SunIcon, secondary",
   args: {
-    level: "h3",
-    size: "medium",
-    variant: "accent-2"
-  },
-};
-
-export const h4: Story = {
-  name: "h4, small, secondary",
-  args: {
-    level: "h4",
-    size: "small",
+    iconName: "SunIcon",
     variant: "secondary"
+  },
+};
+
+export const heart: Story = {
+  name: "HeartIcon, negative",
+  args: {
+    iconName: "HeartIcon",
+    variant: "negative"
   },
 };
 
@@ -79,3 +74,4 @@ export const Tablet: Story = {
 export const Desktop: Story = {
   name: "Desktop"
 };
+

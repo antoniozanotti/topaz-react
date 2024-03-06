@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzButton } from "../../src/components/TzButton";
+import { TzButton } from "./TzButton";
 
 /**
  * The TzButton component has styles for hover, active and focus events, try it.

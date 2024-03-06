@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { TzIcon } from './TzIcon';
+import { TzIcon } from '../TzIcon/TzIcon';
 
 export interface TzToggleThemeProps {
   initialTheme?: "dark" | "";

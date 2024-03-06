@@ -1,8 +1,8 @@
 import React from 'react';
 import * as heroIcons from '@heroicons/react/20/solid';
-import { TzIcon } from './TzIcon';
-import type { TzIconVariant } from './TzIcon';
-import { useVariantClasses, useFocusClasses } from './useStyles';
+import { TzIcon } from '../TzIcon/TzIcon';
+import type { TzIconVariant } from '../TzIcon/TzIcon';
+import { useVariantClasses, useFocusClasses } from '../useStyles';
 
 export interface TzButtonProps extends React.ComponentProps<"button"> {
   label?: string;

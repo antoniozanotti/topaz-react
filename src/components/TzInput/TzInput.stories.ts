@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzInput } from "../../src/components/TzInput";
+import { TzInput } from "./TzInput";
 
 /**
  * The TzInput component has styles for hover and focus events, try it.

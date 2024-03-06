@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useVariantClasses, useFocusClasses } from './useStyles';
+import { useVariantClasses, useFocusClasses } from '../useStyles';
 
 export interface TzTextareaProps extends React.ComponentProps<'textarea'> {
   rows?: number;

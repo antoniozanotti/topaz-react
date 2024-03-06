@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useVariantClasses, useFocusClasses } from './useStyles';
+import { useVariantClasses, useFocusClasses } from '../useStyles';
 
 export interface TzInputProps extends React.ComponentProps<'input'> {
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';

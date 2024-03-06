@@ -72,5 +72,6 @@ export function TzIcon({
 
   return React.createElement(heroIcons[iconName], {
     className: `${sizeClasses} ${variantClasses} ${className}`,
+    title: iconName
   });
 }

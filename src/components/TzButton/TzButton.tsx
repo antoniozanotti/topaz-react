@@ -97,7 +97,7 @@ export function TzButton ({
     : buttonClasses;
 
   return (
-    <button {...props} disabled={disabled}>
+    <button {...props} disabled={disabled || isLoading}>
       {iconName &&
         React.createElement(TzIcon, {
           iconName: iconName,

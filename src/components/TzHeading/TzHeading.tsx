@@ -1,28 +1,32 @@
 import React from 'react';
 import { ReactNode } from 'react';
 
+export type TzHeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type TzHeadingSize = 'small' | 'medium' | 'large' | 'x_large';
+export type TzHeadingVariant =
+  | 'accent'
+  | 'accent-1'
+  | 'accent-2'
+  | 'primary'
+  | 'primary-1'
+  | 'primary-2'
+  | 'secondary'
+  | 'secondary-1'
+  | 'secondary-2'
+  | 'negative'
+  | 'negative-1'
+  | 'negative-2'
+  | 'dark'
+  | 'dark-1'
+  | 'dark-2'
+  | 'light'
+  | 'light-1'
+  | 'light-2';
+
 export interface TzHeadingProps extends React.ComponentProps<'h1'> {
-  level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  size?: 'small' | 'medium' | 'large' | 'x_large';
-  variant?:
-    | 'accent'
-    | 'accent-1'
-    | 'accent-2'
-    | 'primary'
-    | 'primary-1'
-    | 'primary-2'
-    | 'secondary'
-    | 'secondary-1'
-    | 'secondary-2'
-    | 'negative'
-    | 'negative-1'
-    | 'negative-2'
-    | 'dark'
-    | 'dark-1'
-    | 'dark-2'
-    | 'light'
-    | 'light-1'
-    | 'light-2';
+  level?: TzHeadingLevel;
+  size?: TzHeadingSize;
+  variant?: TzHeadingVariant;
   children?: ReactNode;
 }
 

@@ -37,17 +37,17 @@ export function TzHeading({
   children,
   ...props
 }: TzHeadingProps) {
-  let headingClasses = '';
+  let headingClasses = 'leading-none';
 
   switch (size) {
     case 'small':
-      headingClasses = 'text-c5 md:text-c6 lg:text-c7 xl:text-c8';
+      headingClasses += ' text-c5 md:text-c6 lg:text-c7 xl:text-c8';
       break;
     case 'medium':
-      headingClasses = 'text-c7 sm:text-c8 lg:text-c10';
+      headingClasses += ' text-c7 sm:text-c8 lg:text-c10';
       break;
     default:
-      headingClasses = 'text-c9 sm:text-c10 lg:text-c11';
+      headingClasses += ' text-c9 sm:text-c10 lg:text-c11';
       break;
   }
 

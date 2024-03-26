@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TzLabel } from "./TzLabel";
+import { TzTag } from "./TzTag";
 
 /**
- * The TzLabel component.
+ * The TzTag component.
  */
-const meta: Meta<typeof TzLabel> = {
-  component: TzLabel,
+const meta: Meta<typeof TzTag> = {
+  component: TzTag,
   tags: ["autodocs"],
   args: {
     label: "Label",

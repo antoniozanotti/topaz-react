@@ -1,22 +1,22 @@
 import React from 'react';
 import { useVariantClasses } from '../useStyles';
 
-export interface TzLabelProps extends React.ComponentProps<"span"> {
+export interface TzTagProps extends React.ComponentProps<"span"> {
   label?: string;
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
   filled?: boolean;
   disabled?: boolean;
 }
 
-export function TzLabel ({
+export function TzTag ({
   label,
   variant = 'accent',
   filled = true,
   disabled = false,
   ...props
-}: TzLabelProps) {
+}: TzTagProps) {
   /* label classes */
-  let labelOtherClasses = 'rounded font-medium px-2 py-1';
+  let labelOtherClasses = 'rounded font-medium px-2 py-1 text-c2';
 
   // variants and filled
   let variantClasses = useVariantClasses(variant, filled, false);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { TzLabel } from './TzLabel';
+import { TzTag } from './TzTag';
 
 const basicTestSpan = (container: HTMLElement) => {
   const span = container.querySelector("span");
@@ -12,16 +12,16 @@ const basicTestLabel = (span: HTMLElement, text: string) => {
   expect(span).toHaveTextContent(text);
 };
 
-describe('TzLabel Component', () => {
+describe('TzTag Component', () => {
   it('should render span', () => {
-    const { container } = render(<TzLabel label="Label" />);
+    const { container } = render(<TzTag label="Label" />);
     
     basicTestSpan(container);
     basicTestLabel(container, "Label");
   });
 
   it('should render disable state', () => {
-    const { container } = render(<TzLabel label="Locked" disabled={true} />);
+    const { container } = render(<TzTag label="Locked" disabled={true} />);
     
     basicTestSpan(container);
     basicTestLabel(container, "Locked");

@@ -13,7 +13,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const InitialThemeDark: Story = {
-  name: "Initial Theme: Dark",
+  name: "Theme: Dark",
   parameters: {
     themes: {
       themeOverride: 'dark'
@@ -22,10 +22,7 @@ export const InitialThemeDark: Story = {
 };
 
 export const InitialThemeLight: Story = {
-  name: "Initial Theme: Light",
-  args: {
-    initialTheme: ""
-  },
+  name: "Theme: Light",
   parameters: {
     themes: {
       themeOverride: 'light'

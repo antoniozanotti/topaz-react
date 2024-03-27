@@ -1,24 +1,15 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { TzIcon } from '../TzIcon/TzIcon';
 
-export interface TzToggleThemeProps {
-  initialTheme?: "dark" | "";
+export interface TzToggleThemeProps extends React.ComponentProps<'button'> {
   className?: string;
 }
 
-export function TzToggleTheme({ initialTheme = "dark", className = '' }: TzToggleThemeProps) {
-  const [theme, setTheme] = useState(initialTheme);
-  const handleClick = () => {
-    if (theme == 'dark') {
-      document.documentElement.classList.remove('dark');
-      setTheme('');
-    } else {
-      document.documentElement.classList.add('dark');
-      setTheme('dark');
-    }
-  };
-
+export function TzToggleTheme({
+  className = '',
+  ...props
+}: TzToggleThemeProps) {
   let buttonBackground = 'bg-secondary dark:bg-dark-secondary';
   let buttonSize = 'w-[104px] h-[38px] lg:w-[132px] lg:h-[48px]';
   let buttonOther = 'rounded-full cursor-pointer relative flex justify-around';
@@ -32,7 +23,7 @@ export function TzToggleTheme({ initialTheme = "dark", className = '' }: TzToggl
   return (
     <button
       className={`${buttonBackground} ${buttonSize} ${buttonOther} ${className}`}
-      onClick={handleClick}
+      {...props}
     >
       <span
         className={`${spanAnimation} ${spanBackground} ${spanOther} ${spanSize} ${spanPosition}`}

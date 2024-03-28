@@ -24,6 +24,7 @@ export function TzToggleTheme({
     <button
       className={`${buttonBackground} ${buttonSize} ${buttonOther} ${className}`}
       {...props}
+      role="presentation"
     >
       <span
         className={`${spanAnimation} ${spanBackground} ${spanOther} ${spanSize} ${spanPosition}`}

@@ -60,9 +60,9 @@ function useDisabledStyles(isLoading?: boolean, disabled?: boolean) {
 }
 
 function useIconVariant(
-  variant?: VariantEnum,
+  variant?: keyof typeof VariantEnum,
   filled?: boolean
-): IconVariant | undefined {
+): keyof typeof IconVariant | undefined {
   if (!filled) {
     return variant;
   }

@@ -10,10 +10,10 @@ export function TzTag ({
   disabled = false,
   ...props
 }: TzTagInterface) {
-  const tagBaseStyles = 'rounded font-medium px-2 py-1 text-c2';
+  const baseStyles = 'rounded font-medium px-2 py-1 text-c2';
   const variantStyles = useVariantStyles(variant, filled, false);
-  const tagDisabledStyles = disabled ? 'opacity-50' : '';
-  const tagStyles = `${tagBaseStyles} ${variantStyles} ${tagDisabledStyles}`;
+  const disabledStyles = disabled ? 'opacity-50' : '';
+  const tagStyles = `${baseStyles} ${variantStyles} ${disabledStyles}`;
   props.className = props.className
     ? `${tagStyles} ${props.className}`
     : tagStyles;

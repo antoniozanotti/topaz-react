@@ -1,8 +1,8 @@
 export enum VariantEnum {
-  ACCENT = 'accent',
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-  NEGATIVE = 'negative',
-  DARK = 'dark',
-  LIGHT = 'light',
+  accent = 'accent',
+  primary = 'primary',
+  secondary = 'secondary',
+  negative = 'negative',
+  dark = 'dark',
+  light = 'light',
 }

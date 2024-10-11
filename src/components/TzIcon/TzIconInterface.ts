@@ -3,6 +3,6 @@ import { VariantEnum } from './VariantEnum';
 
 export interface TzIconInterface {
   iconName: keyof typeof heroIcons;
-  variant?: VariantEnum;
+  variant?: keyof typeof VariantEnum;
   className?: string;
 }

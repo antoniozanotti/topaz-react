@@ -5,7 +5,7 @@ export interface TzButtonInterface extends React.ComponentProps<'button'> {
   label?: string;
   iconName?: keyof typeof heroIcons;
   isIconAfterLabel?: boolean;
-  variant?: VariantEnum;
+  variant?: keyof typeof VariantEnum;
   filled?: boolean;
   isLoading?: boolean;
   disabled?: boolean;

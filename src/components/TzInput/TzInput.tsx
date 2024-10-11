@@ -1,32 +1,21 @@
 import React, { forwardRef } from 'react';
+import { TzInputInterface } from './TzInputInterface';
+import { VariantEnum } from './VariantEnum';
 import { useVariantStyles, useFocusStyles } from '../useStyles';
 
-export interface TzInputProps extends React.ComponentProps<'input'> {
-  variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
-  filled?: boolean;
-}
-
-export const TzInput = forwardRef<HTMLInputElement, TzInputProps>(
+export const TzInput = forwardRef<HTMLInputElement, TzInputInterface>(
   function TzInput(
-    { variant = 'accent', filled = true, ...props }: TzInputProps,
+    { variant = VariantEnum.ACCENT, filled = true, ...props }: TzInputInterface,
     ref
   ) {
-    /* input Styles */
-    let inputOtherStyles = 'rounded';
-
-    // focus
+    let inputBaseStyles = 'rounded';
     let focusStyles = useFocusStyles();
-
-    // size
     let sizeStyles =
       'h-[28px] sm:h-[38px] lg:h-[48px] px-[10px] sm:px-[14px] lg:px-[20px]';
-
-    // variants and filled
     let variantStyles = useVariantStyles(variant, filled);
-
-    let inputStyles = `${inputOtherStyles} ${focusStyles} ${sizeStyles} ${variantStyles}`;
+    let inputStyles = `${inputBaseStyles} ${focusStyles} ${sizeStyles} ${variantStyles}`;
     props.className = props.className
-      ? inputStyles + ' ' + props.className
+      ? `${inputStyles} ${props.className}`
       : inputStyles;
 
     return <input {...props} ref={ref} />;

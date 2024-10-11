@@ -27,51 +27,51 @@ export function TzIcon({
   className = '',
 }: TzIconProps) {
   // size
-  let sizeClasses = 'w-[16px] h-[16px] lg:w-[20px] lg:h-[20px]';
+  let sizeStyles = 'w-[16px] h-[16px] lg:w-[20px] lg:h-[20px]';
 
   // variants
-  let variantClasses = '';
+  let variantStyles = '';
   switch (variant) {
     case 'accent':
-      variantClasses = 'text-accent dark:text-dark-accent';
+      variantStyles = 'text-accent dark:text-dark-accent';
       break;
     case 'inverse-accent':
-      variantClasses = 'text-inverse-accent dark:text-inverse-dark-accent';
+      variantStyles = 'text-inverse-accent dark:text-inverse-dark-accent';
       break;
     case 'primary':
-      variantClasses = 'text-primary dark:text-dark-primary';
+      variantStyles = 'text-primary dark:text-dark-primary';
       break;
     case 'inverse-primary':
-      variantClasses = 'text-inverse-primary dark:text-inverse-dark-primary';
+      variantStyles = 'text-inverse-primary dark:text-inverse-dark-primary';
       break;
     case 'secondary':
-      variantClasses = 'text-secondary dark:text-dark-secondary';
+      variantStyles = 'text-secondary dark:text-dark-secondary';
       break;
     case 'inverse-secondary':
-      variantClasses = 'text-inverse-secondary dark:text-inverse-dark-secondary';
+      variantStyles = 'text-inverse-secondary dark:text-inverse-dark-secondary';
       break;
     case 'negative':
-      variantClasses = 'text-negative dark:text-dark-negative';
+      variantStyles = 'text-negative dark:text-dark-negative';
       break;
     case 'inverse-negative':
-      variantClasses = 'text-inverse-negative dark:text-inverse-dark-negative';
+      variantStyles = 'text-inverse-negative dark:text-inverse-dark-negative';
       break;
     case 'dark':
-      variantClasses = 'text-dark dark:text-dark-dark';
+      variantStyles = 'text-dark dark:text-dark-dark';
       break;
     case 'inverse-dark':
-      variantClasses = 'text-inverse-dark dark:text-inverse-dark-dark';
+      variantStyles = 'text-inverse-dark dark:text-inverse-dark-dark';
       break;
     case 'light':
-      variantClasses = 'text-light dark:text-dark-light';
+      variantStyles = 'text-light dark:text-dark-light';
       break;
     case 'inverse-light':
-      variantClasses = 'text-inverse-light dark:text-inverse-dark-light';
+      variantStyles = 'text-inverse-light dark:text-inverse-dark-light';
       break;
   }
 
   return React.createElement(heroIcons[iconName], {
-    className: `${sizeClasses} ${variantClasses} ${className}`,
+    className: `${sizeStyles} ${variantStyles} ${className}`,
     title: iconName
   });
 }

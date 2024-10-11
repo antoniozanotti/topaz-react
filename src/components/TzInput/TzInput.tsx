@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useVariantClasses, useFocusClasses } from '../useStyles';
+import { useVariantStyles, useFocusStyles } from '../useStyles';
 
 export interface TzInputProps extends React.ComponentProps<'input'> {
   variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
@@ -11,23 +11,23 @@ export const TzInput = forwardRef<HTMLInputElement, TzInputProps>(
     { variant = 'accent', filled = true, ...props }: TzInputProps,
     ref
   ) {
-    /* input classes */
-    let inputOtherClasses = 'rounded';
+    /* input Styles */
+    let inputOtherStyles = 'rounded';
 
     // focus
-    let focusClasses = useFocusClasses();
+    let focusStyles = useFocusStyles();
 
     // size
-    let sizeClasses =
+    let sizeStyles =
       'h-[28px] sm:h-[38px] lg:h-[48px] px-[10px] sm:px-[14px] lg:px-[20px]';
 
     // variants and filled
-    let variantClasses = useVariantClasses(variant, filled);
+    let variantStyles = useVariantStyles(variant, filled);
 
-    let inputClasses = `${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses}`;
+    let inputStyles = `${inputOtherStyles} ${focusStyles} ${sizeStyles} ${variantStyles}`;
     props.className = props.className
-      ? inputClasses + ' ' + props.className
-      : inputClasses;
+      ? inputStyles + ' ' + props.className
+      : inputStyles;
 
     return <input {...props} ref={ref} />;
   }

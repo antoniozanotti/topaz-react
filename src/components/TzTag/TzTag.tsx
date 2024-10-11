@@ -1,5 +1,5 @@
 import React from 'react';
-import { useVariantClasses } from '../useStyles';
+import { useVariantStyles } from '../useStyles';
 
 export interface TzTagProps extends React.ComponentProps<"span"> {
   label?: string;
@@ -15,19 +15,19 @@ export function TzTag ({
   disabled = false,
   ...props
 }: TzTagProps) {
-  /* label classes */
-  let labelOtherClasses = 'rounded font-medium px-2 py-1 text-c2';
+  /* label Styles */
+  let labelOtherStyles = 'rounded font-medium px-2 py-1 text-c2';
 
   // variants and filled
-  let variantClasses = useVariantClasses(variant, filled, false);
+  let variantStyles = useVariantStyles(variant, filled, false);
 
   // is disabled
-  let labelDisabledClasses = disabled ? 'opacity-50' : '';
+  let labelDisabledStyles = disabled ? 'opacity-50' : '';
 
-  let labelClasses = `${labelOtherClasses} ${variantClasses} ${labelDisabledClasses}`;
+  let labelStyles = `${labelOtherStyles} ${variantStyles} ${labelDisabledStyles}`;
   props.className = props.className
-    ? labelClasses + " " + props.className
-    : labelClasses;
+    ? labelStyles + " " + props.className
+    : labelStyles;
 
   return (
     <span {...props}>{label}</span>

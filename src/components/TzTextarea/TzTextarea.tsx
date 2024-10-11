@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useVariantClasses, useFocusClasses } from '../useStyles';
+import { useVariantStyles, useFocusStyles } from '../useStyles';
 
 export interface TzTextareaProps extends React.ComponentProps<'textarea'> {
   rows?: number;
@@ -18,23 +18,23 @@ export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaProps>(
     ref
   ) {
 
-    /* input classes */
-    let inputOtherClasses = 'rounded';
+    /* input Styles */
+    let inputOtherStyles = 'rounded';
 
     // focus
-    let focusClasses = useFocusClasses();
+    let focusStyles = useFocusStyles();
 
     // size
-    let sizeClasses =
+    let sizeStyles =
       'h-[177px] px-[10px] sm:px-[14px] lg:px-[20px] py-[7px] sm:py-[10px] lg:py-[12px]';
 
     // variants and filled
-    let variantClasses = useVariantClasses(variant, filled);
+    let variantStyles = useVariantStyles(variant, filled);
 
-    let textareaClasses = `${inputOtherClasses} ${focusClasses} ${sizeClasses} ${variantClasses}`;
+    let textareaStyles = `${inputOtherStyles} ${focusStyles} ${sizeStyles} ${variantStyles}`;
     props.className = props.className
-      ? textareaClasses + ' ' + props.className
-      : textareaClasses;
+      ? textareaStyles + ' ' + props.className
+      : textareaStyles;
 
     return <textarea rows={rows} {...props} ref={ref}></textarea>;
   }

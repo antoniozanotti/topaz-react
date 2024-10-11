@@ -1,33 +1,22 @@
 import React from 'react';
+import { TzTagInterface } from './TzTagInterface';
 import { useVariantStyles } from '../useStyles';
-
-export interface TzTagProps extends React.ComponentProps<"span"> {
-  label?: string;
-  variant?: 'accent' | 'primary' | 'secondary' | 'negative' | 'dark' | 'light';
-  filled?: boolean;
-  disabled?: boolean;
-}
+import { VariantEnum } from './VariantEnum';
 
 export function TzTag ({
   label,
-  variant = 'accent',
+  variant = VariantEnum.accent,
   filled = true,
   disabled = false,
   ...props
-}: TzTagProps) {
-  /* label Styles */
-  let labelOtherStyles = 'rounded font-medium px-2 py-1 text-c2';
-
-  // variants and filled
-  let variantStyles = useVariantStyles(variant, filled, false);
-
-  // is disabled
-  let labelDisabledStyles = disabled ? 'opacity-50' : '';
-
-  let labelStyles = `${labelOtherStyles} ${variantStyles} ${labelDisabledStyles}`;
+}: TzTagInterface) {
+  const tagBaseStyles = 'rounded font-medium px-2 py-1 text-c2';
+  const variantStyles = useVariantStyles(variant, filled, false);
+  const tagDisabledStyles = disabled ? 'opacity-50' : '';
+  const tagStyles = `${tagBaseStyles} ${variantStyles} ${tagDisabledStyles}`;
   props.className = props.className
-    ? labelStyles + " " + props.className
-    : labelStyles;
+    ? `${tagStyles} ${props.className}`
+    : tagStyles;
 
   return (
     <span {...props}>{label}</span>

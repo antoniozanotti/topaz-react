@@ -1,12 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { TzIcon, TzIconVariant } from './TzIcon';
+import { TzIcon } from './TzIcon';
 import * as heroIcons from '@heroicons/react/24/outline';
+import { VariantEnum } from './VariantEnum';
 
 const basicTestIcon = (
   iconName: keyof typeof heroIcons,
-  variant: TzIconVariant
+  variant: keyof typeof VariantEnum
 ) => {
   render(<TzIcon iconName={iconName} variant={variant} />);
 

@@ -1,18 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {
-  TzHeading,
-  TzHeadingLevel,
-  TzHeadingSize,
-  TzHeadingVariant,
-} from './TzHeading';
+import { TzHeading } from './TzHeading';
+import { LevelEnum } from './LevelEnum';
+import { SizeEnum } from './SizeEnum';
+import { VariantEnum } from './VariantEnum';
 
 const basicTestHeading = (
-  levelString: TzHeadingLevel,
+  levelString: keyof typeof LevelEnum,
   level: number,
-  size: TzHeadingSize,
-  variant: TzHeadingVariant
+  size: keyof typeof SizeEnum,
+  variant: keyof typeof VariantEnum
 ) => {
   render(
     <TzHeading level={levelString} size={size} variant={variant}>
@@ -28,8 +26,8 @@ const basicTestHeading = (
 };
 
 describe('TzHeading Component', () => {
-  it('should render h1, x_large, accent', () => {
-    basicTestHeading('h1', 1, 'x_large', 'accent');
+  it('should render h1, large, accent', () => {
+    basicTestHeading('h1', 1, 'large', 'accent');
   });
 
   it('should render h2, large, accent-1', () => {

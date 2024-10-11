@@ -9,7 +9,7 @@ const meta: Meta<typeof TzHeading> = {
   tags: ["autodocs"],
   args: {
     level: "h1",
-    size: "x_large",
+    size: "large",
     variant: "accent",
     children: "Heading"
   },
@@ -19,7 +19,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const h1: Story = {
-  name: "h1, x_large, accent"
+  name: "h1, large, accent"
 };
 
 export const h2: Story = {

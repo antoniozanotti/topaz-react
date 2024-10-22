@@ -1,6 +1,6 @@
 import { VariantEnum } from "./VariantEnum";
 
-export interface TzTagInterface extends React.ComponentProps<"span"> {
+export type TzTagInterface = React.ComponentProps<"span"> & {
   label?: string;
   variant?: keyof typeof VariantEnum;
   filled?: boolean;

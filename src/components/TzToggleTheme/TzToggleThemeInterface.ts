@@ -1,3 +1,3 @@
-export interface TzToggleThemeInterface extends React.ComponentProps<'button'> {
+export type TzToggleThemeInterface = React.ComponentProps<'button'> & {
   className?: string;
 }

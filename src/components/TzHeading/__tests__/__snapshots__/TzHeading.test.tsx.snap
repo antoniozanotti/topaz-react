@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TzHeading Component should render h1, large, accent 1`] = `
+<div>
+  <h1
+    class="leading-none text-c9 sm:text-c10 lg:text-c11 text-accent dark:text-dark-accent"
+  >
+    Heading
+  </h1>
+</div>
+`;
+
+exports[`TzHeading Component should render h2, large, accent-1 1`] = `
+<div>
+  <h2
+    class="leading-none text-c9 sm:text-c10 lg:text-c11 text-accent-1 dark:text-dark-accent-1"
+  >
+    Heading
+  </h2>
+</div>
+`;
+
+exports[`TzHeading Component should render h3, medium, accent-2 1`] = `
+<div>
+  <h3
+    class="leading-none text-c7 sm:text-c8 lg:text-c10 text-accent-2 dark:text-dark-accent-2"
+  >
+    Heading
+  </h3>
+</div>
+`;
+
+exports[`TzHeading Component should render h4, small, secondary 1`] = `
+<div>
+  <h4
+    class="leading-none text-c5 md:text-c6 lg:text-c7 xl:text-c8 text-secondary dark:text-dark-secondary"
+  >
+    Heading
+  </h4>
+</div>
+`;

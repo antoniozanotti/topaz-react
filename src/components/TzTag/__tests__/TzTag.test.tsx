@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { TzTag } from './TzTag';
+import { TzTag } from '../TzTag';
 
 const basicTestSpan = (container: HTMLElement) => {
   const span = container.querySelector("span");
@@ -18,6 +18,7 @@ describe('TzTag Component', () => {
     
     basicTestSpan(container);
     basicTestLabel(container, "Label");
+    expect(container).toMatchSnapshot();
   });
 
   it('should render disable state', () => {
@@ -25,5 +26,6 @@ describe('TzTag Component', () => {
     
     basicTestSpan(container);
     basicTestLabel(container, "Locked");
+    expect(container).toMatchSnapshot();
   });
 });

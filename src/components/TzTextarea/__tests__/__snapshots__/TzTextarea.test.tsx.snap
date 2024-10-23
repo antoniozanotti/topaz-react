@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TzTextarea Component should render correctly 1`] = `
+<div>
+  <textarea
+    class="rounded focus:outline focus:outline-offset-2 focus:outline-2 h-[177px] px-[10px] sm:px-[14px] lg:px-[20px] py-[7px] sm:py-[10px] lg:py-[12px]  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent"
+    name="textareaName"
+  />
+</div>
+`;

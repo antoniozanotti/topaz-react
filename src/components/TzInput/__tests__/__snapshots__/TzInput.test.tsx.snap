@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TzInput Component should render correctly 1`] = `
+<div>
+  <input
+    class="rounded focus:outline focus:outline-offset-2 focus:outline-2 h-[28px] sm:h-[38px] lg:h-[48px] px-[10px] sm:px-[14px] lg:px-[20px]  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent"
+    name="inputName"
+  />
+</div>
+`;

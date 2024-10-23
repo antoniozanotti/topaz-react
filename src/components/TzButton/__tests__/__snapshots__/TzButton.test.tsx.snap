@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TzButton Component should render disable state 1`] = `
+<div>
+  <button
+    class="rounded-full font-medium flex gap-x-2 justify-center place-items-center focus:outline focus:outline-offset-2 focus:outline-2  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent h-[38px] lg:h-[48px] min-w-[38px] lg:min-w-[48px] px-[27px] lg:px-[36px] opacity-50 pointer-events-none"
+    disabled=""
+  >
+    <svg
+      aria-hidden="true"
+      class="w-[16px] h-[16px] lg:w-[20px] lg:h-[20px] text-inverse-accent dark:text-inverse-dark-accent "
+      data-slot="icon"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        LockClosedIcon
+      </title>
+      <path
+        d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <span>
+      Locked
+    </span>
+  </button>
+</div>
+`;
+
+exports[`TzButton Component should render label and icon on the left 1`] = `
+<div>
+  <button
+    class="rounded-full font-medium flex gap-x-2 justify-center place-items-center focus:outline focus:outline-offset-2 focus:outline-2  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent h-[38px] lg:h-[48px] min-w-[38px] lg:min-w-[48px] px-[27px] lg:px-[36px] "
+  >
+    <svg
+      aria-hidden="true"
+      class="w-[16px] h-[16px] lg:w-[20px] lg:h-[20px] text-inverse-accent dark:text-inverse-dark-accent "
+      data-slot="icon"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        HomeIcon
+      </title>
+      <path
+        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <span>
+      Home
+    </span>
+  </button>
+</div>
+`;
+
+exports[`TzButton Component should render label and icon on the right 1`] = `
+<div>
+  <button
+    class="rounded-full font-medium flex gap-x-2 justify-center place-items-center focus:outline focus:outline-offset-2 focus:outline-2  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent h-[38px] lg:h-[48px] min-w-[38px] lg:min-w-[48px] px-[27px] lg:px-[36px] "
+  >
+    <svg
+      aria-hidden="true"
+      class="w-[16px] h-[16px] lg:w-[20px] lg:h-[20px] text-inverse-accent dark:text-inverse-dark-accent order-last"
+      data-slot="icon"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        HomeIcon
+      </title>
+      <path
+        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <span>
+      Home
+    </span>
+  </button>
+</div>
+`;
+
+exports[`TzButton Component should render loading state 1`] = `
+<div>
+  <button
+    class="rounded-full font-medium flex gap-x-2 justify-center place-items-center focus:outline focus:outline-offset-2 focus:outline-2  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent h-[38px] lg:h-[48px] min-w-[38px] lg:min-w-[48px] opacity-50 pointer-events-none"
+    disabled=""
+  >
+    <svg
+      aria-hidden="true"
+      class="w-[16px] h-[16px] lg:w-[20px] lg:h-[20px] text-inverse-accent dark:text-inverse-dark-accent  animate-spin"
+      data-slot="icon"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        ArrowPathIcon
+      </title>
+      <path
+        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <span>
+      loading
+    </span>
+  </button>
+</div>
+`;
+
+exports[`TzButton Component should render only icon 1`] = `
+<div>
+  <button
+    class="rounded-full font-medium flex gap-x-2 justify-center place-items-center focus:outline focus:outline-offset-2 focus:outline-2  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent h-[38px] lg:h-[48px] min-w-[38px] lg:min-w-[48px] "
+  >
+    <svg
+      aria-hidden="true"
+      class="w-[16px] h-[16px] lg:w-[20px] lg:h-[20px] text-inverse-accent dark:text-inverse-dark-accent "
+      data-slot="icon"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        HomeIcon
+      </title>
+      <path
+        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`TzButton Component should render only label 1`] = `
+<div>
+  <button
+    class="rounded-full font-medium flex gap-x-2 justify-center place-items-center focus:outline focus:outline-offset-2 focus:outline-2  bg-accent dark:bg-dark-accent hover:bg-accent-1 active:bg-accent-2 focus:outline-accent dark:hover:bg-dark-accent-1 dark:active:bg-dark-accent-2 dark:focus:outline-dark-accent text-inverse-accent dark:text-inverse-dark-accent h-[38px] lg:h-[48px] min-w-[38px] lg:min-w-[48px] px-[27px] lg:px-[36px] "
+  >
+    <span>
+      Home
+    </span>
+  </button>
+</div>
+`;

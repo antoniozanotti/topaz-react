@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TzTag Component should render disable state 1`] = `
+<div>
+  <span
+    class="rounded font-medium px-2 py-1 text-c2  bg-accent dark:bg-dark-accent text-inverse-accent dark:text-inverse-dark-accent opacity-50"
+  >
+    Locked
+  </span>
+</div>
+`;
+
+exports[`TzTag Component should render span 1`] = `
+<div>
+  <span
+    class="rounded font-medium px-2 py-1 text-c2  bg-accent dark:bg-dark-accent text-inverse-accent dark:text-inverse-dark-accent "
+  >
+    Label
+  </span>
+</div>
+`;

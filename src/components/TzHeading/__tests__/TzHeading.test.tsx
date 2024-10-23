@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { TzHeading } from './TzHeading';
-import { LevelEnum } from './LevelEnum';
-import { SizeEnum } from './SizeEnum';
-import { VariantEnum } from './VariantEnum';
+import { TzHeading } from '../TzHeading';
+import { LevelEnum } from '../LevelEnum';
+import { SizeEnum } from '../SizeEnum';
+import { VariantEnum } from '../VariantEnum';
 
 const basicTestHeading = (
   levelString: keyof typeof LevelEnum,
@@ -12,7 +12,7 @@ const basicTestHeading = (
   size: keyof typeof SizeEnum,
   variant: keyof typeof VariantEnum
 ) => {
-  render(
+  const { container } = render(
     <TzHeading level={levelString} size={size} variant={variant}>
       Heading
     </TzHeading>
@@ -21,6 +21,7 @@ const basicTestHeading = (
   const heading = screen.getByRole('heading', { level: level });
   expect(heading).toBeInTheDocument();
   expect(heading).toHaveTextContent('Heading');
+  expect(container).toMatchSnapshot();
 
   return heading;
 };

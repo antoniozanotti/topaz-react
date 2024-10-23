@@ -1,19 +1,20 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { TzIcon } from './TzIcon';
+import { TzIcon } from '../TzIcon';
 import * as heroIcons from '@heroicons/react/24/outline';
-import { VariantEnum } from './VariantEnum';
+import { VariantEnum } from '../VariantEnum';
 
 const basicTestIcon = (
   iconName: keyof typeof heroIcons,
   variant: keyof typeof VariantEnum
 ) => {
-  render(<TzIcon iconName={iconName} variant={variant} />);
+  const { container } = render(<TzIcon iconName={iconName} variant={variant} />);
 
   const icon = screen.getByTitle(iconName);
   expect(icon).toBeInstanceOf(SVGElement);
   expect(icon).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
   
   return icon;
 };

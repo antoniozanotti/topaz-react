@@ -16,7 +16,9 @@ export const TzInput = forwardRef<HTMLInputElement, TzInputInterface>(
     const className = props.className
       ? `${inputStyles} ${props.className}`
       : inputStyles;
-    let customProps = props;
+    let customProps = {...props};
+    delete customProps.variant;
+    delete customProps.filled;
     delete customProps.className;
 
     return <input className={className} {...customProps} ref={ref} />;

@@ -16,8 +16,11 @@ export const TzTextarea = forwardRef<HTMLTextAreaElement, TzTextareaInterface>(
     const className = props.className
       ? `${textareaStyles} ${props.className}`
       : textareaStyles;
-    let customProps = props;
+    let customProps = { ...props };
+    delete customProps.variant;
+    delete customProps.filled;
     delete customProps.className;
+    delete customProps.children;
 
     return (
       <textarea className={className} {...customProps} ref={ref}>

@@ -1,7 +1,7 @@
 import * as heroIcons from '@heroicons/react/20/solid';
 import { VariantEnum } from './VariantEnum';
 
-export type TzButtonInterface = React.ComponentProps<'button'> & {
+export interface TzButtonInterface extends React.ComponentProps<'button'> {
   label?: string;
   iconName?: keyof typeof heroIcons;
   isIconAfterLabel?: boolean;
